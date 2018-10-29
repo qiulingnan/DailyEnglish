@@ -49,6 +49,7 @@
 		16FA9A682186E2190094F334 /* DailyEnglishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyEnglishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FA9A6C2186E2190094F334 /* DailyEnglishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEnglishUITests.swift; sourceTree = "<group>"; };
 		16FA9A6E2186E2190094F334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16FA9A7A2186E37D0094F334 /* DailyEnglish-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyEnglish-Bridging-Header.h"; sourceTree = "<group>"; };
 		7B7C77DE74CB881B9BF9C3C0 /* Pods-DailyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyEnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyEnglish/Pods-DailyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		9EC180393D9051CEB78B9470 /* Pods_DailyEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +111,7 @@
 				16FA9A532186E2190094F334 /* Assets.xcassets */,
 				16FA9A552186E2190094F334 /* LaunchScreen.storyboard */,
 				16FA9A582186E2190094F334 /* Info.plist */,
+				16FA9A7A2186E37D0094F334 /* DailyEnglish-Bridging-Header.h */,
 			);
 			path = DailyEnglish;
 			sourceTree = "<group>";
@@ -219,6 +221,7 @@
 				TargetAttributes = {
 					16FA9A482186E2130094F334 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					16FA9A5C2186E2190094F334 = {
 						CreatedOnToolsVersion = 10.0;
@@ -498,6 +501,7 @@
 			baseConfigurationReference = 7B7C77DE74CB881B9BF9C3C0 /* Pods-DailyEnglish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DailyEnglish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,6 +510,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gns.DailyEnglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyEnglish/DailyEnglish-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -516,6 +522,7 @@
 			baseConfigurationReference = 08337A2EC0DAD116113E2731 /* Pods-DailyEnglish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DailyEnglish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -524,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gns.DailyEnglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyEnglish/DailyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
