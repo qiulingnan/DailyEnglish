@@ -11,7 +11,6 @@
 		16FA9A4D2186E2130094F334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A4C2186E2130094F334 /* AppDelegate.swift */; };
 		16FA9A4F2186E2130094F334 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A4E2186E2130094F334 /* ViewController.swift */; };
 		16FA9A542186E2190094F334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16FA9A532186E2190094F334 /* Assets.xcassets */; };
-		16FA9A572186E2190094F334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FA9A552186E2190094F334 /* LaunchScreen.storyboard */; };
 		16FA9A622186E2190094F334 /* DailyEnglishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A612186E2190094F334 /* DailyEnglishTests.swift */; };
 		16FA9A6D2186E2190094F334 /* DailyEnglishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A6C2186E2190094F334 /* DailyEnglishUITests.swift */; };
 		16FA9A812186FEF60094F334 /* AppMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A802186FEF60094F334 /* AppMacros.swift */; };
@@ -30,6 +29,7 @@
 		16FA9AAE218700F50094F334 /* QLNCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AA9218700F40094F334 /* QLNCustomButton.swift */; };
 		16FA9AAF218700F50094F334 /* QLNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AAA218700F40094F334 /* QLNTextField.swift */; };
 		16FA9AB0218700F50094F334 /* QLNCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AAB218700F50094F334 /* QLNCustomView.swift */; };
+		16FA9AB4218725780094F334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FA9AB3218725780094F334 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 		16FA9A4C2186E2130094F334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16FA9A4E2186E2130094F334 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16FA9A532186E2190094F334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		16FA9A562186E2190094F334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16FA9A582186E2190094F334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16FA9A5D2186E2190094F334 /* DailyEnglishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyEnglishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FA9A612186E2190094F334 /* DailyEnglishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEnglishTests.swift; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		16FA9AA9218700F40094F334 /* QLNCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QLNCustomButton.swift; sourceTree = "<group>"; };
 		16FA9AAA218700F40094F334 /* QLNTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QLNTextField.swift; sourceTree = "<group>"; };
 		16FA9AAB218700F50094F334 /* QLNCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QLNCustomView.swift; sourceTree = "<group>"; };
+		16FA9AB3218725780094F334 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B7C77DE74CB881B9BF9C3C0 /* Pods-DailyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyEnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyEnglish/Pods-DailyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		9EC180393D9051CEB78B9470 /* Pods_DailyEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,7 +146,6 @@
 				16FA9A4C2186E2130094F334 /* AppDelegate.swift */,
 				16FA9A4E2186E2130094F334 /* ViewController.swift */,
 				16FA9A532186E2190094F334 /* Assets.xcassets */,
-				16FA9A552186E2190094F334 /* LaunchScreen.storyboard */,
 				16FA9A582186E2190094F334 /* Info.plist */,
 				16FA9A7A2186E37D0094F334 /* DailyEnglish-Bridging-Header.h */,
 			);
@@ -196,6 +195,7 @@
 		16FA9A822186FF6B0094F334 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				16FA9AB3218725780094F334 /* LaunchScreen.storyboard */,
 				16FA9A832186FF9A0094F334 /* Main.storyboard */,
 			);
 			path = StoryBoard;
@@ -403,8 +403,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16FA9AB4218725780094F334 /* LaunchScreen.storyboard in Resources */,
 				16FA9A842186FF9B0094F334 /* Main.storyboard in Resources */,
-				16FA9A572186E2190094F334 /* LaunchScreen.storyboard in Resources */,
 				16FA9A542186E2190094F334 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,17 +519,6 @@
 			targetProxy = 16FA9A692186E2190094F334 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		16FA9A552186E2190094F334 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				16FA9A562186E2190094F334 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		16FA9A6F2186E2190094F334 /* Debug */ = {
