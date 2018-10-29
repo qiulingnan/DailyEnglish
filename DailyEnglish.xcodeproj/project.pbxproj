@@ -10,11 +10,26 @@
 		13726EFA802DA30503B8FCE3 /* Pods_DailyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC180393D9051CEB78B9470 /* Pods_DailyEnglish.framework */; };
 		16FA9A4D2186E2130094F334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A4C2186E2130094F334 /* AppDelegate.swift */; };
 		16FA9A4F2186E2130094F334 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A4E2186E2130094F334 /* ViewController.swift */; };
-		16FA9A522186E2130094F334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FA9A502186E2130094F334 /* Main.storyboard */; };
 		16FA9A542186E2190094F334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16FA9A532186E2190094F334 /* Assets.xcassets */; };
 		16FA9A572186E2190094F334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FA9A552186E2190094F334 /* LaunchScreen.storyboard */; };
 		16FA9A622186E2190094F334 /* DailyEnglishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A612186E2190094F334 /* DailyEnglishTests.swift */; };
 		16FA9A6D2186E2190094F334 /* DailyEnglishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A6C2186E2190094F334 /* DailyEnglishUITests.swift */; };
+		16FA9A812186FEF60094F334 /* AppMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A802186FEF60094F334 /* AppMacros.swift */; };
+		16FA9A842186FF9B0094F334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FA9A832186FF9A0094F334 /* Main.storyboard */; };
+		16FA9A8D218700350094F334 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A88218700350094F334 /* ImageUtil.swift */; };
+		16FA9A8E218700350094F334 /* RandomUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A89218700350094F334 /* RandomUtil.swift */; };
+		16FA9A8F218700350094F334 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A8A218700350094F334 /* TimeUtil.swift */; };
+		16FA9A90218700350094F334 /* RegularUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A8B218700350094F334 /* RegularUtil.swift */; };
+		16FA9A91218700350094F334 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A8C218700350094F334 /* StringUtil.swift */; };
+		16FA9AA3218700BD0094F334 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A98218700BC0094F334 /* UIViewController+BackButtonHandler.m */; };
+		16FA9AA4218700BD0094F334 /* UITabBar+TabbarItemBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A99218700BD0094F334 /* UITabBar+TabbarItemBadge.m */; };
+		16FA9AA5218700BD0094F334 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A9A218700BD0094F334 /* UIImage+FixOrientation.m */; };
+		16FA9AA6218700BD0094F334 /* UIButton+LSSmsVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A9E218700BD0094F334 /* UIButton+LSSmsVerification.m */; };
+		16FA9AA7218700BD0094F334 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A9F218700BD0094F334 /* UIButton+Badge.m */; };
+		16FA9AA8218700BD0094F334 /* UINavigationItem+CustomBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AA0218700BD0094F334 /* UINavigationItem+CustomBackButton.m */; };
+		16FA9AAE218700F50094F334 /* QLNCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AA9218700F40094F334 /* QLNCustomButton.swift */; };
+		16FA9AAF218700F50094F334 /* QLNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AAA218700F40094F334 /* QLNTextField.swift */; };
+		16FA9AB0218700F50094F334 /* QLNCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AAB218700F50094F334 /* QLNCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +54,6 @@
 		16FA9A492186E2130094F334 /* DailyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FA9A4C2186E2130094F334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16FA9A4E2186E2130094F334 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		16FA9A512186E2130094F334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16FA9A532186E2190094F334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16FA9A562186E2190094F334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16FA9A582186E2190094F334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +64,28 @@
 		16FA9A6C2186E2190094F334 /* DailyEnglishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEnglishUITests.swift; sourceTree = "<group>"; };
 		16FA9A6E2186E2190094F334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16FA9A7A2186E37D0094F334 /* DailyEnglish-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyEnglish-Bridging-Header.h"; sourceTree = "<group>"; };
+		16FA9A802186FEF60094F334 /* AppMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMacros.swift; sourceTree = "<group>"; };
+		16FA9A832186FF9A0094F334 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		16FA9A88218700350094F334 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		16FA9A89218700350094F334 /* RandomUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUtil.swift; sourceTree = "<group>"; };
+		16FA9A8A218700350094F334 /* TimeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
+		16FA9A8B218700350094F334 /* RegularUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularUtil.swift; sourceTree = "<group>"; };
+		16FA9A8C218700350094F334 /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
+		16FA9A97218700BC0094F334 /* UINavigationItem+CustomBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+CustomBackButton.h"; sourceTree = "<group>"; };
+		16FA9A98218700BC0094F334 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		16FA9A99218700BD0094F334 /* UITabBar+TabbarItemBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+TabbarItemBadge.m"; sourceTree = "<group>"; };
+		16FA9A9A218700BD0094F334 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		16FA9A9B218700BD0094F334 /* UITabBar+TabbarItemBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+TabbarItemBadge.h"; sourceTree = "<group>"; };
+		16FA9A9C218700BD0094F334 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		16FA9A9D218700BD0094F334 /* UIButton+LSSmsVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LSSmsVerification.h"; sourceTree = "<group>"; };
+		16FA9A9E218700BD0094F334 /* UIButton+LSSmsVerification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LSSmsVerification.m"; sourceTree = "<group>"; };
+		16FA9A9F218700BD0094F334 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
+		16FA9AA0218700BD0094F334 /* UINavigationItem+CustomBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+CustomBackButton.m"; sourceTree = "<group>"; };
+		16FA9AA1218700BD0094F334 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
+		16FA9AA2218700BD0094F334 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		16FA9AA9218700F40094F334 /* QLNCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QLNCustomButton.swift; sourceTree = "<group>"; };
+		16FA9AAA218700F40094F334 /* QLNTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QLNTextField.swift; sourceTree = "<group>"; };
+		16FA9AAB218700F50094F334 /* QLNCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QLNCustomView.swift; sourceTree = "<group>"; };
 		7B7C77DE74CB881B9BF9C3C0 /* Pods-DailyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyEnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyEnglish/Pods-DailyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		9EC180393D9051CEB78B9470 /* Pods_DailyEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,9 +141,10 @@
 		16FA9A4B2186E2130094F334 /* DailyEnglish */ = {
 			isa = PBXGroup;
 			children = (
+				16FA9A822186FF6B0094F334 /* StoryBoard */,
+				16FA9A7E2186F6510094F334 /* Classes */,
 				16FA9A4C2186E2130094F334 /* AppDelegate.swift */,
 				16FA9A4E2186E2130094F334 /* ViewController.swift */,
-				16FA9A502186E2130094F334 /* Main.storyboard */,
 				16FA9A532186E2190094F334 /* Assets.xcassets */,
 				16FA9A552186E2190094F334 /* LaunchScreen.storyboard */,
 				16FA9A582186E2190094F334 /* Info.plist */,
@@ -132,6 +169,114 @@
 				16FA9A6E2186E2190094F334 /* Info.plist */,
 			);
 			path = DailyEnglishUITests;
+			sourceTree = "<group>";
+		};
+		16FA9A7E2186F6510094F334 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				16FA9A942187009B0094F334 /* UI */,
+				16FA9A93218700960094F334 /* Lib */,
+				16FA9A922187007F0094F334 /* Category */,
+				16FA9A87218700160094F334 /* Utils */,
+				16FA9A862186FFF10094F334 /* Service */,
+				16FA9A852186FFDD0094F334 /* Model */,
+				16FA9A7F2186FEB80094F334 /* Common */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		16FA9A7F2186FEB80094F334 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				16FA9A802186FEF60094F334 /* AppMacros.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		16FA9A822186FF6B0094F334 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				16FA9A832186FF9A0094F334 /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		16FA9A852186FFDD0094F334 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		16FA9A862186FFF10094F334 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		16FA9A87218700160094F334 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				16FA9A88218700350094F334 /* ImageUtil.swift */,
+				16FA9A89218700350094F334 /* RandomUtil.swift */,
+				16FA9A8B218700350094F334 /* RegularUtil.swift */,
+				16FA9A8C218700350094F334 /* StringUtil.swift */,
+				16FA9A8A218700350094F334 /* TimeUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		16FA9A922187007F0094F334 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				16FA9AA1218700BD0094F334 /* UIButton+Badge.h */,
+				16FA9A9F218700BD0094F334 /* UIButton+Badge.m */,
+				16FA9A9D218700BD0094F334 /* UIButton+LSSmsVerification.h */,
+				16FA9A9E218700BD0094F334 /* UIButton+LSSmsVerification.m */,
+				16FA9AA2218700BD0094F334 /* UIImage+FixOrientation.h */,
+				16FA9A9A218700BD0094F334 /* UIImage+FixOrientation.m */,
+				16FA9A97218700BC0094F334 /* UINavigationItem+CustomBackButton.h */,
+				16FA9AA0218700BD0094F334 /* UINavigationItem+CustomBackButton.m */,
+				16FA9A9B218700BD0094F334 /* UITabBar+TabbarItemBadge.h */,
+				16FA9A99218700BD0094F334 /* UITabBar+TabbarItemBadge.m */,
+				16FA9A9C218700BD0094F334 /* UIViewController+BackButtonHandler.h */,
+				16FA9A98218700BC0094F334 /* UIViewController+BackButtonHandler.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		16FA9A93218700960094F334 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		16FA9A942187009B0094F334 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				16FA9A96218700A80094F334 /* Controller */,
+				16FA9A95218700A20094F334 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		16FA9A95218700A20094F334 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16FA9AA9218700F40094F334 /* QLNCustomButton.swift */,
+				16FA9AAB218700F50094F334 /* QLNCustomView.swift */,
+				16FA9AAA218700F40094F334 /* QLNTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16FA9A96218700A80094F334 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		6712F52656B4E4AEAED99E28 /* Frameworks */ = {
@@ -258,9 +403,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16FA9A842186FF9B0094F334 /* Main.storyboard in Resources */,
 				16FA9A572186E2190094F334 /* LaunchScreen.storyboard in Resources */,
 				16FA9A542186E2190094F334 /* Assets.xcassets in Resources */,
-				16FA9A522186E2130094F334 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,8 +469,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16FA9AA8218700BD0094F334 /* UINavigationItem+CustomBackButton.m in Sources */,
+				16FA9AAF218700F50094F334 /* QLNTextField.swift in Sources */,
+				16FA9AA7218700BD0094F334 /* UIButton+Badge.m in Sources */,
+				16FA9AA5218700BD0094F334 /* UIImage+FixOrientation.m in Sources */,
+				16FA9A91218700350094F334 /* StringUtil.swift in Sources */,
+				16FA9AA3218700BD0094F334 /* UIViewController+BackButtonHandler.m in Sources */,
+				16FA9AB0218700F50094F334 /* QLNCustomView.swift in Sources */,
 				16FA9A4F2186E2130094F334 /* ViewController.swift in Sources */,
+				16FA9AAE218700F50094F334 /* QLNCustomButton.swift in Sources */,
 				16FA9A4D2186E2130094F334 /* AppDelegate.swift in Sources */,
+				16FA9AA4218700BD0094F334 /* UITabBar+TabbarItemBadge.m in Sources */,
+				16FA9A8F218700350094F334 /* TimeUtil.swift in Sources */,
+				16FA9A90218700350094F334 /* RegularUtil.swift in Sources */,
+				16FA9A8E218700350094F334 /* RandomUtil.swift in Sources */,
+				16FA9AA6218700BD0094F334 /* UIButton+LSSmsVerification.m in Sources */,
+				16FA9A812186FEF60094F334 /* AppMacros.swift in Sources */,
+				16FA9A8D218700350094F334 /* ImageUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,14 +521,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		16FA9A502186E2130094F334 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				16FA9A512186E2130094F334 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		16FA9A552186E2190094F334 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
