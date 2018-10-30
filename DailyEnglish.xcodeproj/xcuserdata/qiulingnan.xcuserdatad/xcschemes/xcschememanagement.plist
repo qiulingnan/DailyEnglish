@@ -7,7 +7,25 @@
 		<key>DailyEnglish.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>16FA9A482186E2130094F334</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>16FA9A5C2186E2190094F334</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>16FA9A672186E2190094F334</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

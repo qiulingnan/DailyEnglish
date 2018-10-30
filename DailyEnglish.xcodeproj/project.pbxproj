@@ -8,8 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		13726EFA802DA30503B8FCE3 /* Pods_DailyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC180393D9051CEB78B9470 /* Pods_DailyEnglish.framework */; };
+		163A10CD2188423D000AE1D1 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163A10CC2188423D000AE1D1 /* HttpService.swift */; };
+		163A10CF21884331000AE1D1 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163A10CE21884331000AE1D1 /* AppService.swift */; };
+		163A10D12188465C000AE1D1 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163A10D02188465C000AE1D1 /* MainTabBar.swift */; };
+		16CB1A312188728D0030D732 /* ADInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A302188728D0030D732 /* ADInfo.swift */; };
+		16CB1A8E21887EDC0030D732 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A8221887EDB0030D732 /* AFHTTPSessionManager.m */; };
+		16CB1A8F21887EDC0030D732 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A8521887EDC0030D732 /* AFNetworkReachabilityManager.m */; };
+		16CB1A9021887EDC0030D732 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A8721887EDC0030D732 /* AFSecurityPolicy.m */; };
+		16CB1A9121887EDC0030D732 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A8921887EDC0030D732 /* AFURLRequestSerialization.m */; };
+		16CB1A9221887EDC0030D732 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A8B21887EDC0030D732 /* AFURLResponseSerialization.m */; };
+		16CB1A9321887EDC0030D732 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A8D21887EDC0030D732 /* AFURLSessionManager.m */; };
+		16CB1A952188900F0030D732 /* NetStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A942188900F0030D732 /* NetStatus.swift */; };
+		16CB1A9B2188D83E0030D732 /* ADDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A9A2188D83E0030D732 /* ADDetails.swift */; };
 		16FA9A4D2186E2130094F334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A4C2186E2130094F334 /* AppDelegate.swift */; };
-		16FA9A4F2186E2130094F334 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A4E2186E2130094F334 /* ViewController.swift */; };
 		16FA9A542186E2190094F334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16FA9A532186E2190094F334 /* Assets.xcassets */; };
 		16FA9A622186E2190094F334 /* DailyEnglishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A612186E2190094F334 /* DailyEnglishTests.swift */; };
 		16FA9A6D2186E2190094F334 /* DailyEnglishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A6C2186E2190094F334 /* DailyEnglishUITests.swift */; };
@@ -30,6 +41,9 @@
 		16FA9AAF218700F50094F334 /* QLNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AAA218700F40094F334 /* QLNTextField.swift */; };
 		16FA9AB0218700F50094F334 /* QLNCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AAB218700F50094F334 /* QLNCustomView.swift */; };
 		16FA9AB4218725780094F334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FA9AB3218725780094F334 /* LaunchScreen.storyboard */; };
+		16FA9ABA21872DD80094F334 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AB921872DD80094F334 /* StartViewController.swift */; };
+		16FA9AC0218747950094F334 /* ATCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9ABD218747950094F334 /* ATCountdownButton.m */; };
+		16FA9AC1218747950094F334 /* NSTimer+ExtraMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9ABF218747950094F334 /* NSTimer+ExtraMethod.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +65,28 @@
 
 /* Begin PBXFileReference section */
 		08337A2EC0DAD116113E2731 /* Pods-DailyEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyEnglish.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyEnglish/Pods-DailyEnglish.release.xcconfig"; sourceTree = "<group>"; };
+		163A10CC2188423D000AE1D1 /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		163A10CE21884331000AE1D1 /* AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		163A10D02188465C000AE1D1 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		16CB1A302188728D0030D732 /* ADInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADInfo.swift; sourceTree = "<group>"; };
+		16CB1A8021887EDB0030D732 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
+		16CB1A8121887EDB0030D732 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		16CB1A8221887EDB0030D732 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		16CB1A8321887EDB0030D732 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		16CB1A8421887EDB0030D732 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		16CB1A8521887EDC0030D732 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		16CB1A8621887EDC0030D732 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		16CB1A8721887EDC0030D732 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		16CB1A8821887EDC0030D732 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		16CB1A8921887EDC0030D732 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		16CB1A8A21887EDC0030D732 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		16CB1A8B21887EDC0030D732 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		16CB1A8C21887EDC0030D732 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		16CB1A8D21887EDC0030D732 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		16CB1A942188900F0030D732 /* NetStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetStatus.swift; sourceTree = "<group>"; };
+		16CB1A9A2188D83E0030D732 /* ADDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDetails.swift; sourceTree = "<group>"; };
 		16FA9A492186E2130094F334 /* DailyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FA9A4C2186E2130094F334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16FA9A4E2186E2130094F334 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16FA9A532186E2190094F334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16FA9A582186E2190094F334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16FA9A5D2186E2190094F334 /* DailyEnglishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyEnglishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +119,11 @@
 		16FA9AAA218700F40094F334 /* QLNTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QLNTextField.swift; sourceTree = "<group>"; };
 		16FA9AAB218700F50094F334 /* QLNCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QLNCustomView.swift; sourceTree = "<group>"; };
 		16FA9AB3218725780094F334 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16FA9AB921872DD80094F334 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		16FA9ABC218747950094F334 /* ATCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCountdownButton.h; sourceTree = "<group>"; };
+		16FA9ABD218747950094F334 /* ATCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCountdownButton.m; sourceTree = "<group>"; };
+		16FA9ABE218747950094F334 /* NSTimer+ExtraMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+ExtraMethod.h"; sourceTree = "<group>"; };
+		16FA9ABF218747950094F334 /* NSTimer+ExtraMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+ExtraMethod.m"; sourceTree = "<group>"; };
 		7B7C77DE74CB881B9BF9C3C0 /* Pods-DailyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyEnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyEnglish/Pods-DailyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		9EC180393D9051CEB78B9470 /* Pods_DailyEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,6 +154,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16CB1A7F21887EDB0030D732 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				16CB1A8021887EDB0030D732 /* AFCompatibilityMacros.h */,
+				16CB1A8121887EDB0030D732 /* AFHTTPSessionManager.h */,
+				16CB1A8221887EDB0030D732 /* AFHTTPSessionManager.m */,
+				16CB1A8321887EDB0030D732 /* AFNetworking.h */,
+				16CB1A8421887EDB0030D732 /* AFNetworkReachabilityManager.h */,
+				16CB1A8521887EDC0030D732 /* AFNetworkReachabilityManager.m */,
+				16CB1A8621887EDC0030D732 /* AFSecurityPolicy.h */,
+				16CB1A8721887EDC0030D732 /* AFSecurityPolicy.m */,
+				16CB1A8821887EDC0030D732 /* AFURLRequestSerialization.h */,
+				16CB1A8921887EDC0030D732 /* AFURLRequestSerialization.m */,
+				16CB1A8A21887EDC0030D732 /* AFURLResponseSerialization.h */,
+				16CB1A8B21887EDC0030D732 /* AFURLResponseSerialization.m */,
+				16CB1A8C21887EDC0030D732 /* AFURLSessionManager.h */,
+				16CB1A8D21887EDC0030D732 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		16CB1A992188D8060030D732 /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				16FA9AB921872DD80094F334 /* StartViewController.swift */,
+				16CB1A9A2188D83E0030D732 /* ADDetails.swift */,
+			);
+			path = AD;
+			sourceTree = "<group>";
+		};
 		16FA9A402186E2130094F334 = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +212,6 @@
 				16FA9A822186FF6B0094F334 /* StoryBoard */,
 				16FA9A7E2186F6510094F334 /* Classes */,
 				16FA9A4C2186E2130094F334 /* AppDelegate.swift */,
-				16FA9A4E2186E2130094F334 /* ViewController.swift */,
 				16FA9A532186E2190094F334 /* Assets.xcassets */,
 				16FA9A582186E2190094F334 /* Info.plist */,
 				16FA9A7A2186E37D0094F334 /* DailyEnglish-Bridging-Header.h */,
@@ -204,6 +271,8 @@
 		16FA9A852186FFDD0094F334 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				16CB1A302188728D0030D732 /* ADInfo.swift */,
+				16CB1A942188900F0030D732 /* NetStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +280,8 @@
 		16FA9A862186FFF10094F334 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				163A10CE21884331000AE1D1 /* AppService.swift */,
+				163A10CC2188423D000AE1D1 /* HttpService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -249,6 +320,7 @@
 		16FA9A93218700960094F334 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				16CB1A7F21887EDB0030D732 /* AFNetworking */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -265,6 +337,7 @@
 		16FA9A95218700A20094F334 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				16FA9ABB218747950094F334 /* ATCountdownButton */,
 				16FA9AA9218700F40094F334 /* QLNCustomButton.swift */,
 				16FA9AAB218700F50094F334 /* QLNCustomView.swift */,
 				16FA9AAA218700F40094F334 /* QLNTextField.swift */,
@@ -275,8 +348,21 @@
 		16FA9A96218700A80094F334 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				16CB1A992188D8060030D732 /* AD */,
+				163A10D02188465C000AE1D1 /* MainTabBar.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		16FA9ABB218747950094F334 /* ATCountdownButton */ = {
+			isa = PBXGroup;
+			children = (
+				16FA9ABC218747950094F334 /* ATCountdownButton.h */,
+				16FA9ABD218747950094F334 /* ATCountdownButton.m */,
+				16FA9ABE218747950094F334 /* NSTimer+ExtraMethod.h */,
+				16FA9ABF218747950094F334 /* NSTimer+ExtraMethod.m */,
+			);
+			path = ATCountdownButton;
 			sourceTree = "<group>";
 		};
 		6712F52656B4E4AEAED99E28 /* Frameworks */ = {
@@ -451,10 +537,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DailyEnglish/Pods-DailyEnglish-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,22 +559,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16CB1A9121887EDC0030D732 /* AFURLRequestSerialization.m in Sources */,
+				16CB1A9B2188D83E0030D732 /* ADDetails.swift in Sources */,
 				16FA9AA8218700BD0094F334 /* UINavigationItem+CustomBackButton.m in Sources */,
+				16FA9AC1218747950094F334 /* NSTimer+ExtraMethod.m in Sources */,
 				16FA9AAF218700F50094F334 /* QLNTextField.swift in Sources */,
+				16CB1A312188728D0030D732 /* ADInfo.swift in Sources */,
+				16CB1A9321887EDC0030D732 /* AFURLSessionManager.m in Sources */,
 				16FA9AA7218700BD0094F334 /* UIButton+Badge.m in Sources */,
+				163A10D12188465C000AE1D1 /* MainTabBar.swift in Sources */,
 				16FA9AA5218700BD0094F334 /* UIImage+FixOrientation.m in Sources */,
 				16FA9A91218700350094F334 /* StringUtil.swift in Sources */,
 				16FA9AA3218700BD0094F334 /* UIViewController+BackButtonHandler.m in Sources */,
 				16FA9AB0218700F50094F334 /* QLNCustomView.swift in Sources */,
-				16FA9A4F2186E2130094F334 /* ViewController.swift in Sources */,
 				16FA9AAE218700F50094F334 /* QLNCustomButton.swift in Sources */,
+				16CB1A952188900F0030D732 /* NetStatus.swift in Sources */,
+				163A10CD2188423D000AE1D1 /* HttpService.swift in Sources */,
+				16CB1A8F21887EDC0030D732 /* AFNetworkReachabilityManager.m in Sources */,
 				16FA9A4D2186E2130094F334 /* AppDelegate.swift in Sources */,
 				16FA9AA4218700BD0094F334 /* UITabBar+TabbarItemBadge.m in Sources */,
 				16FA9A8F218700350094F334 /* TimeUtil.swift in Sources */,
+				16CB1A8E21887EDC0030D732 /* AFHTTPSessionManager.m in Sources */,
 				16FA9A90218700350094F334 /* RegularUtil.swift in Sources */,
+				16FA9ABA21872DD80094F334 /* StartViewController.swift in Sources */,
 				16FA9A8E218700350094F334 /* RandomUtil.swift in Sources */,
+				163A10CF21884331000AE1D1 /* AppService.swift in Sources */,
+				16FA9AC0218747950094F334 /* ATCountdownButton.m in Sources */,
+				16CB1A9021887EDC0030D732 /* AFSecurityPolicy.m in Sources */,
 				16FA9AA6218700BD0094F334 /* UIButton+LSSmsVerification.m in Sources */,
 				16FA9A812186FEF60094F334 /* AppMacros.swift in Sources */,
+				16CB1A9221887EDC0030D732 /* AFURLResponseSerialization.m in Sources */,
 				16FA9A8D218700350094F334 /* ImageUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,7 +748,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y36SYGP76P;
 				INFOPLIST_FILE = DailyEnglish/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -665,7 +771,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y36SYGP76P;
 				INFOPLIST_FILE = DailyEnglish/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
