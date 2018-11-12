@@ -17,6 +17,8 @@ class HttpService :NSObject{
     
     let urlHead:String = "http://common.api.en8848.com/"
     
+    let picUrlHead:String = "http://www.en8848.com.cn"
+    
     let session = AFHTTPSessionManager()
     
     static let httpService:HttpService = HttpService()
@@ -58,13 +60,20 @@ class HttpService :NSObject{
         session.requestSerializer = AFJSONRequestSerializer()
         
     }
-    //整体接口的成功失败回调
     
+    //整体接口的成功失败回调
     func succesed(task:URLSessionDataTask,responseObject:AnyObject!,succeed:Succeed,failed:Failure) {
         
         let obj = NetStatus.mj_object(withKeyValues: responseObject)!
         
-        succeed(task,obj.data)
+        if(obj.status == 0){
+            
+            succeed(task,obj.data)
+        }else{
+            EasyLoadingView.hidenLoading()
+            AppService.shared().showTip(tip: obj.msg as String)
+        }
+        
     }
     
     func failed(task:URLSessionDataTask!,error:NSError!,failed:Failure,refresh:Refresh?){
@@ -164,7 +173,7 @@ class HttpService :NSObject{
     }
     
     func post(urlLast:String!,parameters:AnyObject?,succeed:@escaping Succeed,failed:@escaping Failure){
-     
+        
         session.post(urlHead + urlLast, parameters: parameters, progress: { (Progress) in
             
         }, success: { (task:URLSessionDataTask, responseObject:Any?) in

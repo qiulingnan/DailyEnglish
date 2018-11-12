@@ -8,9 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		13726EFA802DA30503B8FCE3 /* Pods_DailyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC180393D9051CEB78B9470 /* Pods_DailyEnglish.framework */; };
+		1620DA522189F72200B3CEA2 /* PersonalCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620DA512189F72200B3CEA2 /* PersonalCenter.swift */; };
+		1620DA57218B1AE000B3CEA2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620DA56218B1AE000B3CEA2 /* Login.swift */; };
 		163A10CD2188423D000AE1D1 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163A10CC2188423D000AE1D1 /* HttpService.swift */; };
 		163A10CF21884331000AE1D1 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163A10CE21884331000AE1D1 /* AppService.swift */; };
 		163A10D12188465C000AE1D1 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163A10D02188465C000AE1D1 /* MainTabBar.swift */; };
+		16417317218F821700EC37ED /* LYLPhotoTailoringTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 16417310218F821700EC37ED /* LYLPhotoTailoringTool.m */; };
+		16417318218F821700EC37ED /* LYLPhotoTailoringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16417312218F821700EC37ED /* LYLPhotoTailoringViewController.m */; };
+		16417319218F821700EC37ED /* PhotoMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16417314218F821700EC37ED /* PhotoMaskView.m */; };
+		1641731A218F821700EC37ED /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 16417316218F821700EC37ED /* UIImage+Crop.m */; };
+		165D9327218C2F0100EFFA53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165D9326218C2F0100EFFA53 /* Main.storyboard */; };
+		165D9329218C2FF400EFFA53 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165D9328218C2FF400EFFA53 /* Login.storyboard */; };
+		165D932B218C33DF00EFFA53 /* Regist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165D932A218C33DF00EFFA53 /* Regist.swift */; };
+		165D932D218C33F500EFFA53 /* ForgetPassWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165D932C218C33F500EFFA53 /* ForgetPassWorld.swift */; };
+		1668CDEA2190771200AB4487 /* EditNikeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1668CDE92190771200AB4487 /* EditNikeName.swift */; };
+		1668CDF02190CAEF00AB4487 /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1668CDEF2190CAEF00AB4487 /* Personal.storyboard */; };
+		1668CDF22190CB0A00AB4487 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1668CDF12190CB0A00AB4487 /* Setting.swift */; };
+		166E7E6C218EFE0C004212DC /* SMSVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166E7E6B218EFE0C004212DC /* SMSVerification.swift */; };
+		166E7E6E218F37FD004212DC /* ResetPassWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166E7E6D218F37FD004212DC /* ResetPassWorld.swift */; };
+		1670F31C2196079700FBA64E /* AudioSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1670F31B2196079700FBA64E /* AudioSet.m */; };
+		167DD2C321946D3300FBFB05 /* HWBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DD2C221946D3300FBFB05 /* HWBaseWebViewController.m */; };
+		167DD2C521946D8F00FBFB05 /* ADWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167DD2C421946D8F00FBFB05 /* ADWeb.swift */; };
+		167DD2C72194B81F00FBFB05 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167DD2C62194B81F00FBFB05 /* Home.storyboard */; };
+		167DD2C92194B90B00FBFB05 /* AudioDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167DD2C82194B90B00FBFB05 /* AudioDetails.swift */; };
+		16A0019121932D4D00AA8A23 /* HomeTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A0019021932D4D00AA8A23 /* HomeTableInfo.swift */; };
 		16CB1A312188728D0030D732 /* ADInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A302188728D0030D732 /* ADInfo.swift */; };
 		16CB1A8E21887EDC0030D732 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A8221887EDB0030D732 /* AFHTTPSessionManager.m */; };
 		16CB1A8F21887EDC0030D732 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A8521887EDC0030D732 /* AFNetworkReachabilityManager.m */; };
@@ -19,13 +40,15 @@
 		16CB1A9221887EDC0030D732 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A8B21887EDC0030D732 /* AFURLResponseSerialization.m */; };
 		16CB1A9321887EDC0030D732 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A8D21887EDC0030D732 /* AFURLSessionManager.m */; };
 		16CB1A952188900F0030D732 /* NetStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A942188900F0030D732 /* NetStatus.swift */; };
-		16CB1A9B2188D83E0030D732 /* ADDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB1A9A2188D83E0030D732 /* ADDetails.swift */; };
+		16D6A28C2191CBB200EACD02 /* DailyRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D6A28B2191CBB200EACD02 /* DailyRecommendation.swift */; };
+		16D6A28E2191F0E000EACD02 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D6A28D2191F0E000EACD02 /* HomeHeaderView.swift */; };
+		16D6A2902191F95F00EACD02 /* ScrolInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D6A28F2191F95F00EACD02 /* ScrolInfo.swift */; };
+		16D6A2922191FC0800EACD02 /* HomeNewsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D6A2912191FC0800EACD02 /* HomeNewsInfo.swift */; };
 		16FA9A4D2186E2130094F334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A4C2186E2130094F334 /* AppDelegate.swift */; };
 		16FA9A542186E2190094F334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16FA9A532186E2190094F334 /* Assets.xcassets */; };
 		16FA9A622186E2190094F334 /* DailyEnglishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A612186E2190094F334 /* DailyEnglishTests.swift */; };
 		16FA9A6D2186E2190094F334 /* DailyEnglishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A6C2186E2190094F334 /* DailyEnglishUITests.swift */; };
 		16FA9A812186FEF60094F334 /* AppMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A802186FEF60094F334 /* AppMacros.swift */; };
-		16FA9A842186FF9B0094F334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FA9A832186FF9A0094F334 /* Main.storyboard */; };
 		16FA9A8D218700350094F334 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A88218700350094F334 /* ImageUtil.swift */; };
 		16FA9A8E218700350094F334 /* RandomUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A89218700350094F334 /* RandomUtil.swift */; };
 		16FA9A8F218700350094F334 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A8A218700350094F334 /* TimeUtil.swift */; };
@@ -36,7 +59,6 @@
 		16FA9AA5218700BD0094F334 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A9A218700BD0094F334 /* UIImage+FixOrientation.m */; };
 		16FA9AA6218700BD0094F334 /* UIButton+LSSmsVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A9E218700BD0094F334 /* UIButton+LSSmsVerification.m */; };
 		16FA9AA7218700BD0094F334 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9A9F218700BD0094F334 /* UIButton+Badge.m */; };
-		16FA9AA8218700BD0094F334 /* UINavigationItem+CustomBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AA0218700BD0094F334 /* UINavigationItem+CustomBackButton.m */; };
 		16FA9AAE218700F50094F334 /* QLNCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AA9218700F40094F334 /* QLNCustomButton.swift */; };
 		16FA9AAF218700F50094F334 /* QLNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AAA218700F40094F334 /* QLNTextField.swift */; };
 		16FA9AB0218700F50094F334 /* QLNCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA9AAB218700F50094F334 /* QLNCustomView.swift */; };
@@ -65,9 +87,36 @@
 
 /* Begin PBXFileReference section */
 		08337A2EC0DAD116113E2731 /* Pods-DailyEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyEnglish.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyEnglish/Pods-DailyEnglish.release.xcconfig"; sourceTree = "<group>"; };
+		1620DA512189F72200B3CEA2 /* PersonalCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCenter.swift; sourceTree = "<group>"; };
+		1620DA56218B1AE000B3CEA2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		163A10CC2188423D000AE1D1 /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		163A10CE21884331000AE1D1 /* AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		163A10D02188465C000AE1D1 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		1641730F218F821700EC37ED /* LYLPhotoTailoringTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLPhotoTailoringTool.h; sourceTree = "<group>"; };
+		16417310218F821700EC37ED /* LYLPhotoTailoringTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLPhotoTailoringTool.m; sourceTree = "<group>"; };
+		16417311218F821700EC37ED /* LYLPhotoTailoringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLPhotoTailoringViewController.h; sourceTree = "<group>"; };
+		16417312218F821700EC37ED /* LYLPhotoTailoringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLPhotoTailoringViewController.m; sourceTree = "<group>"; };
+		16417313218F821700EC37ED /* PhotoMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoMaskView.h; sourceTree = "<group>"; };
+		16417314218F821700EC37ED /* PhotoMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoMaskView.m; sourceTree = "<group>"; };
+		16417315218F821700EC37ED /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
+		16417316218F821700EC37ED /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
+		165D9326218C2F0100EFFA53 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		165D9328218C2FF400EFFA53 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		165D932A218C33DF00EFFA53 /* Regist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regist.swift; sourceTree = "<group>"; };
+		165D932C218C33F500EFFA53 /* ForgetPassWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassWorld.swift; sourceTree = "<group>"; };
+		1668CDE92190771200AB4487 /* EditNikeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNikeName.swift; sourceTree = "<group>"; };
+		1668CDEF2190CAEF00AB4487 /* Personal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
+		1668CDF12190CB0A00AB4487 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		166E7E6B218EFE0C004212DC /* SMSVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSVerification.swift; sourceTree = "<group>"; };
+		166E7E6D218F37FD004212DC /* ResetPassWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassWorld.swift; sourceTree = "<group>"; };
+		1670F31A2196079700FBA64E /* AudioSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioSet.h; sourceTree = "<group>"; };
+		1670F31B2196079700FBA64E /* AudioSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioSet.m; sourceTree = "<group>"; };
+		167DD2C121946D3300FBFB05 /* HWBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWBaseWebViewController.h; sourceTree = "<group>"; };
+		167DD2C221946D3300FBFB05 /* HWBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWBaseWebViewController.m; sourceTree = "<group>"; };
+		167DD2C421946D8F00FBFB05 /* ADWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADWeb.swift; sourceTree = "<group>"; };
+		167DD2C62194B81F00FBFB05 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		167DD2C82194B90B00FBFB05 /* AudioDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDetails.swift; sourceTree = "<group>"; };
+		16A0019021932D4D00AA8A23 /* HomeTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableInfo.swift; sourceTree = "<group>"; };
 		16CB1A302188728D0030D732 /* ADInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADInfo.swift; sourceTree = "<group>"; };
 		16CB1A8021887EDB0030D732 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		16CB1A8121887EDB0030D732 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -84,7 +133,10 @@
 		16CB1A8C21887EDC0030D732 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		16CB1A8D21887EDC0030D732 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		16CB1A942188900F0030D732 /* NetStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetStatus.swift; sourceTree = "<group>"; };
-		16CB1A9A2188D83E0030D732 /* ADDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDetails.swift; sourceTree = "<group>"; };
+		16D6A28B2191CBB200EACD02 /* DailyRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRecommendation.swift; sourceTree = "<group>"; };
+		16D6A28D2191F0E000EACD02 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		16D6A28F2191F95F00EACD02 /* ScrolInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrolInfo.swift; sourceTree = "<group>"; };
+		16D6A2912191FC0800EACD02 /* HomeNewsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewsInfo.swift; sourceTree = "<group>"; };
 		16FA9A492186E2130094F334 /* DailyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FA9A4C2186E2130094F334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16FA9A532186E2190094F334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,13 +149,11 @@
 		16FA9A6E2186E2190094F334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16FA9A7A2186E37D0094F334 /* DailyEnglish-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyEnglish-Bridging-Header.h"; sourceTree = "<group>"; };
 		16FA9A802186FEF60094F334 /* AppMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMacros.swift; sourceTree = "<group>"; };
-		16FA9A832186FF9A0094F334 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		16FA9A88218700350094F334 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		16FA9A89218700350094F334 /* RandomUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUtil.swift; sourceTree = "<group>"; };
 		16FA9A8A218700350094F334 /* TimeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
 		16FA9A8B218700350094F334 /* RegularUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularUtil.swift; sourceTree = "<group>"; };
 		16FA9A8C218700350094F334 /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
-		16FA9A97218700BC0094F334 /* UINavigationItem+CustomBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+CustomBackButton.h"; sourceTree = "<group>"; };
 		16FA9A98218700BC0094F334 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		16FA9A99218700BD0094F334 /* UITabBar+TabbarItemBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+TabbarItemBadge.m"; sourceTree = "<group>"; };
 		16FA9A9A218700BD0094F334 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
@@ -112,7 +162,6 @@
 		16FA9A9D218700BD0094F334 /* UIButton+LSSmsVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LSSmsVerification.h"; sourceTree = "<group>"; };
 		16FA9A9E218700BD0094F334 /* UIButton+LSSmsVerification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LSSmsVerification.m"; sourceTree = "<group>"; };
 		16FA9A9F218700BD0094F334 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
-		16FA9AA0218700BD0094F334 /* UINavigationItem+CustomBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+CustomBackButton.m"; sourceTree = "<group>"; };
 		16FA9AA1218700BD0094F334 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
 		16FA9AA2218700BD0094F334 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
 		16FA9AA9218700F40094F334 /* QLNCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QLNCustomButton.swift; sourceTree = "<group>"; };
@@ -154,6 +203,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1620DA502189F6BC00B3CEA2 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				1620DA512189F72200B3CEA2 /* PersonalCenter.swift */,
+				1668CDF12190CB0A00AB4487 /* Setting.swift */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		1620DA55218B1AD100B3CEA2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1620DA56218B1AE000B3CEA2 /* Login.swift */,
+				165D932A218C33DF00EFFA53 /* Regist.swift */,
+				165D932C218C33F500EFFA53 /* ForgetPassWorld.swift */,
+				166E7E6B218EFE0C004212DC /* SMSVerification.swift */,
+				166E7E6D218F37FD004212DC /* ResetPassWorld.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1641730E218F821700EC37ED /* PhotoTailoringSource */ = {
+			isa = PBXGroup;
+			children = (
+				1641730F218F821700EC37ED /* LYLPhotoTailoringTool.h */,
+				16417310218F821700EC37ED /* LYLPhotoTailoringTool.m */,
+				16417311218F821700EC37ED /* LYLPhotoTailoringViewController.h */,
+				16417312218F821700EC37ED /* LYLPhotoTailoringViewController.m */,
+				16417313218F821700EC37ED /* PhotoMaskView.h */,
+				16417314218F821700EC37ED /* PhotoMaskView.m */,
+				16417315218F821700EC37ED /* UIImage+Crop.h */,
+				16417316218F821700EC37ED /* UIImage+Crop.m */,
+			);
+			path = PhotoTailoringSource;
+			sourceTree = "<group>";
+		};
+		1668CDEB2190772200AB4487 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				1668CDE92190771200AB4487 /* EditNikeName.swift */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		1668CDEC2190C2AF00AB4487 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				16D6A28B2191CBB200EACD02 /* DailyRecommendation.swift */,
+				167DD2C82194B90B00FBFB05 /* AudioDetails.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		167DD2C021946D3300FBFB05 /* HWBaseWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				167DD2C121946D3300FBFB05 /* HWBaseWebViewController.h */,
+				167DD2C221946D3300FBFB05 /* HWBaseWebViewController.m */,
+			);
+			path = HWBaseWebViewController;
+			sourceTree = "<group>";
+		};
 		16CB1A7F21887EDB0030D732 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				16FA9AB921872DD80094F334 /* StartViewController.swift */,
-				16CB1A9A2188D83E0030D732 /* ADDetails.swift */,
+				167DD2C421946D8F00FBFB05 /* ADWeb.swift */,
 			);
 			path = AD;
 			sourceTree = "<group>";
@@ -262,8 +373,11 @@
 		16FA9A822186FF6B0094F334 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				165D9328218C2FF400EFFA53 /* Login.storyboard */,
+				165D9326218C2F0100EFFA53 /* Main.storyboard */,
 				16FA9AB3218725780094F334 /* LaunchScreen.storyboard */,
-				16FA9A832186FF9A0094F334 /* Main.storyboard */,
+				1668CDEF2190CAEF00AB4487 /* Personal.storyboard */,
+				167DD2C62194B81F00FBFB05 /* Home.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -273,6 +387,9 @@
 			children = (
 				16CB1A302188728D0030D732 /* ADInfo.swift */,
 				16CB1A942188900F0030D732 /* NetStatus.swift */,
+				16D6A28F2191F95F00EACD02 /* ScrolInfo.swift */,
+				16D6A2912191FC0800EACD02 /* HomeNewsInfo.swift */,
+				16A0019021932D4D00AA8A23 /* HomeTableInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +399,8 @@
 			children = (
 				163A10CE21884331000AE1D1 /* AppService.swift */,
 				163A10CC2188423D000AE1D1 /* HttpService.swift */,
+				1670F31A2196079700FBA64E /* AudioSet.h */,
+				1670F31B2196079700FBA64E /* AudioSet.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -307,8 +426,6 @@
 				16FA9A9E218700BD0094F334 /* UIButton+LSSmsVerification.m */,
 				16FA9AA2218700BD0094F334 /* UIImage+FixOrientation.h */,
 				16FA9A9A218700BD0094F334 /* UIImage+FixOrientation.m */,
-				16FA9A97218700BC0094F334 /* UINavigationItem+CustomBackButton.h */,
-				16FA9AA0218700BD0094F334 /* UINavigationItem+CustomBackButton.m */,
 				16FA9A9B218700BD0094F334 /* UITabBar+TabbarItemBadge.h */,
 				16FA9A99218700BD0094F334 /* UITabBar+TabbarItemBadge.m */,
 				16FA9A9C218700BD0094F334 /* UIViewController+BackButtonHandler.h */,
@@ -320,6 +437,7 @@
 		16FA9A93218700960094F334 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				1641730E218F821700EC37ED /* PhotoTailoringSource */,
 				16CB1A7F21887EDB0030D732 /* AFNetworking */,
 			);
 			path = Lib;
@@ -328,6 +446,7 @@
 		16FA9A942187009B0094F334 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1668CDEB2190772200AB4487 /* Dialog */,
 				16FA9A96218700A80094F334 /* Controller */,
 				16FA9A95218700A20094F334 /* View */,
 			);
@@ -337,10 +456,12 @@
 		16FA9A95218700A20094F334 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				167DD2C021946D3300FBFB05 /* HWBaseWebViewController */,
 				16FA9ABB218747950094F334 /* ATCountdownButton */,
 				16FA9AA9218700F40094F334 /* QLNCustomButton.swift */,
 				16FA9AAB218700F50094F334 /* QLNCustomView.swift */,
 				16FA9AAA218700F40094F334 /* QLNTextField.swift */,
+				16D6A28D2191F0E000EACD02 /* HomeHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +469,9 @@
 		16FA9A96218700A80094F334 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1668CDEC2190C2AF00AB4487 /* Home */,
+				1620DA55218B1AD100B3CEA2 /* Login */,
+				1620DA502189F6BC00B3CEA2 /* Personal */,
 				16CB1A992188D8060030D732 /* AD */,
 				163A10D02188465C000AE1D1 /* MainTabBar.swift */,
 			);
@@ -453,6 +577,11 @@
 					16FA9A482186E2130094F334 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					16FA9A5C2186E2190094F334 = {
 						CreatedOnToolsVersion = 10.0;
@@ -489,9 +618,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165D9329218C2FF400EFFA53 /* Login.storyboard in Resources */,
+				1668CDF02190CAEF00AB4487 /* Personal.storyboard in Resources */,
 				16FA9AB4218725780094F334 /* LaunchScreen.storyboard in Resources */,
-				16FA9A842186FF9B0094F334 /* Main.storyboard in Resources */,
+				167DD2C72194B81F00FBFB05 /* Home.storyboard in Resources */,
 				16FA9A542186E2190094F334 /* Assets.xcassets in Resources */,
+				165D9327218C2F0100EFFA53 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,14 +669,24 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DailyEnglish/Pods-DailyEnglish-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EasyShowView/EasyShowView.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/StreamingKit/StreamingKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyShowView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StreamingKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,28 +702,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				16CB1A9121887EDC0030D732 /* AFURLRequestSerialization.m in Sources */,
-				16CB1A9B2188D83E0030D732 /* ADDetails.swift in Sources */,
-				16FA9AA8218700BD0094F334 /* UINavigationItem+CustomBackButton.m in Sources */,
+				167DD2C321946D3300FBFB05 /* HWBaseWebViewController.m in Sources */,
+				16417319218F821700EC37ED /* PhotoMaskView.m in Sources */,
+				16D6A28C2191CBB200EACD02 /* DailyRecommendation.swift in Sources */,
+				16D6A2922191FC0800EACD02 /* HomeNewsInfo.swift in Sources */,
+				165D932B218C33DF00EFFA53 /* Regist.swift in Sources */,
 				16FA9AC1218747950094F334 /* NSTimer+ExtraMethod.m in Sources */,
 				16FA9AAF218700F50094F334 /* QLNTextField.swift in Sources */,
+				16D6A2902191F95F00EACD02 /* ScrolInfo.swift in Sources */,
 				16CB1A312188728D0030D732 /* ADInfo.swift in Sources */,
 				16CB1A9321887EDC0030D732 /* AFURLSessionManager.m in Sources */,
 				16FA9AA7218700BD0094F334 /* UIButton+Badge.m in Sources */,
+				16A0019121932D4D00AA8A23 /* HomeTableInfo.swift in Sources */,
 				163A10D12188465C000AE1D1 /* MainTabBar.swift in Sources */,
+				166E7E6E218F37FD004212DC /* ResetPassWorld.swift in Sources */,
+				1668CDF22190CB0A00AB4487 /* Setting.swift in Sources */,
+				1620DA57218B1AE000B3CEA2 /* Login.swift in Sources */,
 				16FA9AA5218700BD0094F334 /* UIImage+FixOrientation.m in Sources */,
 				16FA9A91218700350094F334 /* StringUtil.swift in Sources */,
+				16417317218F821700EC37ED /* LYLPhotoTailoringTool.m in Sources */,
 				16FA9AA3218700BD0094F334 /* UIViewController+BackButtonHandler.m in Sources */,
+				167DD2C92194B90B00FBFB05 /* AudioDetails.swift in Sources */,
 				16FA9AB0218700F50094F334 /* QLNCustomView.swift in Sources */,
+				1641731A218F821700EC37ED /* UIImage+Crop.m in Sources */,
+				165D932D218C33F500EFFA53 /* ForgetPassWorld.swift in Sources */,
+				16417318218F821700EC37ED /* LYLPhotoTailoringViewController.m in Sources */,
+				167DD2C521946D8F00FBFB05 /* ADWeb.swift in Sources */,
 				16FA9AAE218700F50094F334 /* QLNCustomButton.swift in Sources */,
 				16CB1A952188900F0030D732 /* NetStatus.swift in Sources */,
 				163A10CD2188423D000AE1D1 /* HttpService.swift in Sources */,
 				16CB1A8F21887EDC0030D732 /* AFNetworkReachabilityManager.m in Sources */,
 				16FA9A4D2186E2130094F334 /* AppDelegate.swift in Sources */,
 				16FA9AA4218700BD0094F334 /* UITabBar+TabbarItemBadge.m in Sources */,
+				16D6A28E2191F0E000EACD02 /* HomeHeaderView.swift in Sources */,
+				1668CDEA2190771200AB4487 /* EditNikeName.swift in Sources */,
 				16FA9A8F218700350094F334 /* TimeUtil.swift in Sources */,
+				1670F31C2196079700FBA64E /* AudioSet.m in Sources */,
+				1620DA522189F72200B3CEA2 /* PersonalCenter.swift in Sources */,
 				16CB1A8E21887EDC0030D732 /* AFHTTPSessionManager.m in Sources */,
 				16FA9A90218700350094F334 /* RegularUtil.swift in Sources */,
 				16FA9ABA21872DD80094F334 /* StartViewController.swift in Sources */,
+				166E7E6C218EFE0C004212DC /* SMSVerification.swift in Sources */,
 				16FA9A8E218700350094F334 /* RandomUtil.swift in Sources */,
 				163A10CF21884331000AE1D1 /* AppService.swift in Sources */,
 				16FA9AC0218747950094F334 /* ATCountdownButton.m in Sources */,

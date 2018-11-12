@@ -15,9 +15,23 @@ class MainTabBar: UITabBarController {
 
         AppService.shared().navigate = self.navigationController
         
+        setSelectItemImage()
+        
+        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: self, action: nil)
+//        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
     }
     
-
+    //设置选中状态的图片，主要用于处理让图片选中状态不渲染tinkcolor
+    func setSelectItemImage(){
+        
+        var temp = ["iv_tuijian_press","iv_classify_press","iv_study_press","iv_me_pres"]
+        
+        for i in 0..<4{
+            self.viewControllers?[i].tabBarItem.selectedImage = UIImage(named: temp[i])?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        }
+        
+    }
     /*
     // MARK: - Navigation
 

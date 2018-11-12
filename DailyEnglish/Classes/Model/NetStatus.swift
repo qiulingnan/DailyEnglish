@@ -11,5 +11,5 @@ import UIKit
 class NetStatus: NSObject {
     @objc var status:NSNumber!
     @objc var msg:NSString!
-    @objc var data:NSDictionary!
+    @objc var data:NSObject!
 }

@@ -23,6 +23,8 @@ class StartViewController: UIViewController {
         
         leapfrogBtn.titleLabel?.font = UIFont(name: fontStr1, size: 24)
         
+        
+        
         leapfrogBtn.start(withDuration: 5.0, block: { (time) in
             
             let temp = [5,4,3,2,1]
@@ -35,20 +37,18 @@ class StartViewController: UIViewController {
             
             let sb = UIStoryboard(name:"Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
-            
-            
             self.present(vc, animated: true, completion: nil)
             
         }
         
-        let parameters = ["section":"1","appid":"mryy"]
+        let parameters = ["section":"1","appid":AppService.shared().appid]
         
         HttpService.shared().post(urlLast: "ad", parameters:parameters as AnyObject , succeed: { (task:URLSessionDataTask?, obj:AnyObject?) in
         
             self.ad = ADInfo.mj_object(withKeyValues: obj)!
             
             let img = self.bgImage!
-            img.sd_setImage(with: NSURL(string: self.ad.imgSrc as String)! as URL, placeholderImage: UIImage(named: "ad_defaule"),options: SDWebImageOptions.retryFailed, completed: nil)
+            img.sd_setImage(with: NSURL(string: self.ad.imgSrc as String)! as URL, placeholderImage: UIImage(named: "bg_transparent"),options: SDWebImageOptions.retryFailed, completed: nil)
             
             
         }) { (task:URLSessionDataTask?, error:NSError?) in
@@ -65,10 +65,6 @@ class StartViewController: UIViewController {
     
     @objc func onBGClick(gestureRecognizer:UIGestureRecognizer){
         
-        let sb = UIStoryboard(name:"Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "ADDetails") as! ADDetails
-        vc.url = ad.toUrl! as String
-        self.present(vc, animated: true, completion: nil)
     }
     
 

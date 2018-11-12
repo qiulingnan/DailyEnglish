@@ -47,6 +47,8 @@ class ImageUtil: NSObject {
     
     class func saveImage(imageData:NSData, name:String) {
         
+        ImageUtil.createFolderInDocuments(path: "Images")
+        
         /// 1、获得沙盒的根路径
         let home = NSHomeDirectory() as NSString
         /// 2、获得Documents路径，使用NSString对象的stringByAppendingPathComponent()方法拼接路径
@@ -55,9 +57,9 @@ class ImageUtil: NSObject {
         let filePath = docPath.appendingPathComponent("Images/\(name)")
         // 4、将数据写入文件中
         imageData.write(toFile: filePath, atomically: true)
+        
     }
 
-    
     class func readImage(name:NSString) -> UIImage?{
         
         /// 1、获得沙盒的根路径
@@ -65,7 +67,7 @@ class ImageUtil: NSObject {
         /// 2、获得Documents路径，使用NSString对象的stringByAppendingPathComponent()方法拼接路径
         let docPath = home.appendingPathComponent("Documents") as NSString
         /// 3、获取文本文件路径
-        
+
         let filePath = docPath.appendingPathComponent("Images/\(name)")
         
         let image:UIImage! = UIImage(contentsOfFile: filePath)

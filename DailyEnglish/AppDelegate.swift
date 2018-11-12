@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //开启网络监听
         HttpService.shared().startNetMonitor()
         
+        AppService.shared().loadLocalData()
+        
+        // 注册后台播放
+        let audioSet = AudioSet()
+        audioSet.setAudiu()
+        
         return true
     }
 

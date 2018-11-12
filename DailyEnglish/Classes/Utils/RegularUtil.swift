@@ -13,7 +13,7 @@ class RegularUtil: NSObject {
     class func isTelNumber(num:NSString)->Bool{
         
         if num.length != 11{
-//            AppService.sharedAppService().showTip("手机号码不正确")
+            AppService.shared().showTip(tip: "手机号码不正确")
             return false
         }
         
