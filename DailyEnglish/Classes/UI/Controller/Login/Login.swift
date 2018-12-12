@@ -78,14 +78,14 @@ class Login: UIViewController ,UITextFieldDelegate{
             
             AppService.shared().saveUserData(userName: self.phoneField.text!, passWorld: self.passWorldFeild.text!)
             
+            let dict:NSDictionary = obj as! NSDictionary
+            
+            AppService.shared().uid = dict.object(forKey: "uid")! as? String
+            
             if(AppService.shared().personal != nil){
                 AppService.shared().personal.loadIcon()
                 AppService.shared().personal.loadNikeName()
             }
-            
-            let dict:NSDictionary = obj as! NSDictionary
-            
-            AppService.shared().uid = dict.object(forKey: "uid")! as? String
             
             EasyLoadingView.hidenLoading()
             

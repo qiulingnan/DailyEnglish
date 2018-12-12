@@ -10,13 +10,13 @@ import UIKit
 
 class ADWeb: HWBaseWebViewController {
 
-    var model:ScrolInfo!
+    var url_string:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.loadBackItems()
-        self.url = URL(string: model.mp3url as String)
+        self.url = URL(string: url_string)
         
     }
     

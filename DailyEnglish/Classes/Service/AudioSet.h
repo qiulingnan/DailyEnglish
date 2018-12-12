@@ -12,7 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AudioSet : NSObject
 
--(void)setAudiu;
++(void)setAudiu;
++(void)resetAudiu;
+
++(NSMutableData*)pcm_to_wav :(NSString *)path sampleRate:(long)sampleRate;
 
 @end
 

@@ -21,6 +21,14 @@ let autoplay_str = "defaults_autoplay"//进入界面自动播放
 let dividing_str = "defaults_dividing"//内容界面显示分割线
 let longBright_str = "defaults_longBright"//保持屏幕长亮
 
+let collect_datas = "collect_datas"//收藏数据
+let sentence_datas = "sentence_datas"//例句数据
+let word_datas = "word_datas"//单词数据
+let download_datas = "download_datas"//下载数据
+let subscription_datas = "subscription_datas"//下载数据
+let signIn_Datas = "signIn_datas"//下载数据
+
+
 let icon_image = "icon_image"
 
 //colors
@@ -34,3 +42,4 @@ let fontStr1 = "STHeitiSC-Medium"
 
 
 let lrcDownloadName = "templrc"
+let mp3DownloadName = "tempmp3"

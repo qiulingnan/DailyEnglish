@@ -74,14 +74,18 @@ class HomeHeaderView: UIView ,SDCycleScrollViewDelegate{
         
         var i:CGFloat = 0
         for item in self.newsInfo.content {
-            let newsBtn = UIButton()
+            let newsBtn = UIImageView()
             
             let bgView = UIView()
             newsBGView.addSubview(bgView)
             _ = bgView.sd_layout()?.leftSpaceToView(newsBGView,latticeWidth * i)?.widthIs(latticeWidth)?.topSpaceToView(title,0)?.bottomSpaceToView(newsBGView,0)
             
             let url = HttpService.shared().picUrlHead + ((item as! HomeNewsContentInfo).pic as String)
-            newsBtn.sd_setBackgroundImage(with: URL(string: url), for: .normal, placeholderImage: UIImage(named: "bg_transparent"), options: .cacheMemoryOnly, completed: nil)
+            newsBtn.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "bg_transparent"), options: .cacheMemoryOnly, completed: nil)
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(onNews))
+            newsBtn.isUserInteractionEnabled = true
+            newsBtn.addGestureRecognizer(tap)
+            newsBtn.tag = Int(1000 + i)
             bgView.addSubview(newsBtn)
             _ = newsBtn.sd_layout()?.centerXEqualToView(bgView)?.widthIs(btnWidth)?.topSpaceToView(bgView,5)?.bottomSpaceToView(bgView,20)
             
@@ -95,6 +99,13 @@ class HomeHeaderView: UIView ,SDCycleScrollViewDelegate{
             i += 1
         }
         
+    }
+    
+    @objc func onNews(tap:UITapGestureRecognizer){
+        let sb = UIStoryboard(name:"Home", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "BookDetails") as! BookDetails
+        vc.bookInfo = self.newsInfo.content.object(at: tap.view!.tag - 1000) as? HomeNewsContentInfo
+        AppService.shared().navigate.pushViewController(vc, animated: true)
     }
     
     func initBanner(){
@@ -147,7 +158,7 @@ class HomeHeaderView: UIView ,SDCycleScrollViewDelegate{
         if(model.type == 1){
             
             let vc = ADWeb()
-            vc.model = model
+            vc.url_string = model.mp3url! as String
             AppService.shared().navigate.pushViewController(vc, animated: true)
             
         }else if(model.type == 0){
@@ -155,6 +166,65 @@ class HomeHeaderView: UIView ,SDCycleScrollViewDelegate{
             let sb = UIStoryboard(name:"Home", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "AudioDetails") as! AudioDetails
             vc.initModel(model: model)
+            AppService.shared().navigate.pushViewController(vc, animated: true)
+        }
+    }
+    
+    @objc func onSort(){
+        AppService.shared().mainTabbar.turnView(index: 1)
+        
+    }
+    
+    @objc func onEssence(){
+        let sb = UIStoryboard(name:"Home", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Essence") as! Essence
+        vc.books = self.newsInfos
+        AppService.shared().navigate.pushViewController(vc, animated: true)
+    }
+    
+    @objc func onGame(){
+        let loadingView = EasyLoadingView.showLoadingText("") { () -> EasyLoadingConfig? in
+            
+            let config = EasyLoadingConfig.shared()
+            config.showOnWindow = true
+            config.tintColor = netColor
+            config.superReceiveEvent = false
+            return config
+        }
+        
+        HttpService.shared().post(urlLast: "api/games", parameters: nil, succeed: { (task:URLSessionDataTask?, obj:AnyObject?) in
+            
+            let dict = obj?.mj_keyValues()
+            
+            let vc = ADWeb()
+            vc.url_string = (dict?.object(forKey: "url") as! String)
+            AppService.shared().navigate.pushViewController(vc, animated: true)
+            
+            EasyLoadingView.hidenLoading(loadingView)
+            
+        }) { (task:URLSessionDataTask?, error:NSError?) in
+            EasyLoadingView.hidenLoading(loadingView)
+        }
+    }
+    
+    @objc func onDay(){
+        if(AppService.shared().checkLogin()){
+            let dateStr = NSString.getNowTime()
+            
+            let arr = dateStr?.components(separatedBy: "-")
+            
+            let year = (arr![0] as NSString).intValue
+            let month = (arr![1] as NSString).intValue
+            let day = (arr![2] as NSString).intValue
+            
+            var dateStr1 = "\(String(describing: year))-\(String(describing: month))-\(String(describing: day))"
+            if(day < 10){
+                dateStr1 = "\(String(describing: year))-\(String(describing: month))-0\(String(describing: day))"
+            }
+            
+            let sb = UIStoryboard(name:"Personal", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "SignIn") as!  SignIn
+            vc.initDatas(year: Int(year), month: Int(month), day: Int(day),dateStr: dateStr1,isToday: true)
             AppService.shared().navigate.pushViewController(vc, animated: true)
         }
     }
@@ -174,6 +244,7 @@ class HomeHeaderView: UIView ,SDCycleScrollViewDelegate{
         let sortBtn = UIButton(frame: CGRect(x: overallWidth * 0.25 - latticeWidth / 2 - btnWidth / 2, y: btnY, width: btnWidth, height: btnWidth))
         sortBtn.setImage(UIImage(named: "home_category"), for: .normal)
         sortBGView.addSubview(sortBtn)
+        sortBtn.addTarget(self, action: #selector(onSort), for: .touchUpInside)
         
         let sortLabel = UILabel()
         sortBGView.addSubview(sortLabel)
@@ -184,6 +255,7 @@ class HomeHeaderView: UIView ,SDCycleScrollViewDelegate{
         let essenceBtn = UIButton(frame: CGRect(x: overallWidth * 0.5 - latticeWidth / 2 - btnWidth / 2, y: btnY, width: btnWidth, height: btnWidth))
         essenceBtn.setImage(UIImage(named: "iv_home_activity"), for: .normal)
         sortBGView.addSubview(essenceBtn)
+        essenceBtn.addTarget(self, action: #selector(onEssence), for: .touchUpInside)
         
         let essenceLabel = UILabel()
         sortBGView.addSubview(essenceLabel)
@@ -194,6 +266,7 @@ class HomeHeaderView: UIView ,SDCycleScrollViewDelegate{
         let gameBtn = UIButton(frame: CGRect(x: overallWidth * 0.75 - latticeWidth / 2 - btnWidth / 2, y: btnY, width: btnWidth, height: btnWidth))
         gameBtn.setImage(UIImage(named: "home_game"), for: .normal)
         sortBGView.addSubview(gameBtn)
+        gameBtn.addTarget(self, action: #selector(onGame), for: .touchUpInside)
         
         let gameLabel = UILabel()
         sortBGView.addSubview(gameLabel)
@@ -203,6 +276,7 @@ class HomeHeaderView: UIView ,SDCycleScrollViewDelegate{
         
         let readBtn = UIButton(frame: CGRect(x: overallWidth - latticeWidth / 2 - btnWidth / 2, y: btnY, width: btnWidth, height: btnWidth))
         readBtn.setImage(UIImage(named: "sign"), for: .normal)
+        readBtn.addTarget(self, action: #selector(onDay), for: .touchUpInside)
         sortBGView.addSubview(readBtn)
 
         let readLabel = UILabel()

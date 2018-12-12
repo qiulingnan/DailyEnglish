@@ -39,6 +39,13 @@ class TimeUtil: NSObject {
         
     }
     
+    class func stringFormCurrentTime() -> String{
+        
+        let date = timeToData(time: currentTime())
+        
+        return stringFromDate(date: date)
+    }
+    
     class func dateToTime(str:String) ->TimeInterval {
         
         let formatter = DateFormatter()

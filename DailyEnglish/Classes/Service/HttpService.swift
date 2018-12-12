@@ -71,6 +71,7 @@ class HttpService :NSObject{
             succeed(task,obj.data)
         }else{
             EasyLoadingView.hidenLoading()
+            EasyLoadingView.hidenLoing(in: UIApplication.shared.keyWindow)
             AppService.shared().showTip(tip: obj.msg as String)
         }
         
@@ -78,83 +79,6 @@ class HttpService :NSObject{
     
     func failed(task:URLSessionDataTask!,error:NSError!,failed:Failure,refresh:Refresh?){
         failed(task, error)
-//        if(self.faildObj != nil){
-//            //* {"errCode":40110012,"message":"refreshToken已失效"}
-//            //* {"errCode":40110013,"message":"账号异常"}
-//            let model = FaildModel.mj_objectWithKeyValues(self.faildObj)
-//            if(model != nil){
-//
-//                if(model.errCode == 40110011){//"accessToken已失效"
-//
-//                    let refreshToken = NSUserDefaults.standardUserDefaults().stringForKey(refreshToken_key)
-//
-//                    if(refreshToken != nil){
-//                        self.post("tokens?client=ios", parameters: ["grantType":"refresh","refreshToken":"\(refreshToken!)"], headType: HeadType.HeadType_2, succeed: { (task:NSURLSessionDataTask!, obj:AnyObject!) in
-//
-//                            AppService.sharedAppService().isLogin = true
-//
-//                            let u = User.mj_objectWithKeyValues(obj)
-//
-//                            AppService.sharedAppService().resetLoginData(u)//保存到本地数据
-//                            if(refresh != nil){
-//                                refresh!()
-//                            }
-//
-//
-//                            }, failed: { (task:NSURLSessionDataTask!, error:NSError!) in
-//
-//                                failed(task, error)
-//
-//
-//                        })
-//                    }else{
-//                        failed(task, error)
-//                    }
-//
-//
-//                }else if(model.errCode == 40110010){//登录冲突
-//                    failed(task, error)
-//                    AppService.sharedAppService().exitLogin()
-//                }else{
-//                    failed(task, error)
-//                }
-//
-//            }else{
-//                failed(task, error)
-//            }
-//
-//            if(model.errCode == 40110012){
-//                failed(task, error)
-//                AppService.sharedAppService().exitLogin()
-//
-//            }else{
-//
-//                failed(task, error)
-//            }
-//
-//            if(model.errCode == 40110013){
-//                failed(task, error)
-//                AppService.sharedAppService().exitLogin()
-//
-//            }else{
-//
-//                failed(task, error)
-//            }
-//
-//            if(!model.message.isEqual("accessToken已失效")){
-//
-//                if(model.errCode == 40410000){
-//                    AppService.sharedAppService().showTip("商品已下架或者已转移")
-//                }else{
-//                   AppService.sharedAppService().showTip(model.message as String)
-//                }
-//            }
-//
-//        }else{
-//            failed(task, error)
-//        }
-        
-
         
         
     }

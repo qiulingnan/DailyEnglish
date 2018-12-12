@@ -65,6 +65,7 @@ class PersonalCenter: UIViewController {
             let iconImage = ImageUtil.readImage(name: icon_image as NSString)
             if(iconImage != nil){
                 iconBtn.setImage(iconImage, for: UIControl.State.normal)
+                AppService.shared().iconImage = iconImage
             }
         }
         
@@ -99,6 +100,11 @@ class PersonalCenter: UIViewController {
                     let dict:NSDictionary = arr.object(at: 0) as! NSDictionary
                     
                     self.nikeNameLabel.text = dict.object(forKey: "nick") as? String
+                    
+                    if(self.nikeNameLabel.text == ""){
+                        self.nikeNameLabel.text = AppService.shared().userName
+                    }
+                    AppService.shared().nickName = self.nikeNameLabel.text! as NSString
                 }) { (task:URLSessionDataTask?, error:NSError?) in
                     
                 }
@@ -112,6 +118,7 @@ class PersonalCenter: UIViewController {
         if(AppService.shared().checkLogin()){
             LYLPhotoTailoringTool.shared()?.photoTailoring({ (image:UIImage?) in
                 self.iconBtn.setImage(image, for: UIControl.State.normal)
+                AppService.shared().iconImage = image
                 
                 var data:NSData!
                 if image?.pngData() == nil {
@@ -127,7 +134,9 @@ class PersonalCenter: UIViewController {
     }
     
     @IBAction func onReward(_ sender: Any) {
-        
+        let sb = UIStoryboard(name:"LearnCenter", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "RewardRanking")
+        AppService.shared().navigate.pushViewController(vc, animated: true)
     }
     
     @IBAction func onChallenge(_ sender: Any) {
@@ -135,11 +144,18 @@ class PersonalCenter: UIViewController {
     }
     
     @IBAction func onSignIn(_ sender: Any) {
+        if(AppService.shared().checkLogin()){
+            let sb = UIStoryboard(name:"Personal", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "SignInRecord")
+            AppService.shared().navigate.pushViewController(vc, animated: true)
+        }
         
     }
     
     @IBAction func onOpintion(_ sender: Any) {
-        
+        let sb = UIStoryboard(name:"Personal", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Opinion")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func onSetting(_ sender: Any) {
@@ -156,7 +172,9 @@ class PersonalCenter: UIViewController {
     }
     
     @IBAction func onAbout(_ sender: Any) {
-        
+        let sb = UIStoryboard(name:"Personal", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "About")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

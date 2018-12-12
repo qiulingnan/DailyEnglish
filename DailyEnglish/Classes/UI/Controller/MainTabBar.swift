@@ -14,6 +14,7 @@ class MainTabBar: UITabBarController {
         super.viewDidLoad()
 
         AppService.shared().navigate = self.navigationController
+        AppService.shared().mainTabbar = self
         
         setSelectItemImage()
         
@@ -32,14 +33,14 @@ class MainTabBar: UITabBarController {
         }
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func turnView(index:Int){
+        self.selectedIndex = index
     }
-    */
 
+    override func viewWillAppear(_ animated: Bool) {
+        if(AppService.shared().playAudio != nil){
+            AppService.shared().playAudio.rotationAnimation()
+        }
+    }
 }

@@ -17,14 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        ImageUtil.createFolderInDocuments(path: "SignAudio")
         //开启网络监听
         HttpService.shared().startNetMonitor()
         
         AppService.shared().loadLocalData()
         
         // 注册后台播放
-        let audioSet = AudioSet()
-        audioSet.setAudiu()
+        AudioSet.setAudiu()
+        
+        //注册讯飞
+        IFlySetting.setLogFile(.LVL_LOW)
+        IFlySetting.showLogcat(false)
+        
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        let cachePath = (paths as NSArray).object(at: 0)
+        IFlySetting.setLogFilePath((cachePath as! String))
+        
+        let initString = "appid=5c0cb175"
+        IFlySpeechUtility.createUtility(initString)
         
         return true
     }

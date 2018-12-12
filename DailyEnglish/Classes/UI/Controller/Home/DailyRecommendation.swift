@@ -86,15 +86,24 @@ class DailyRecommendation: UIViewController ,UITableViewDataSource,UITableViewDe
         self.table.delaysContentTouches = false
 
         // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的headerRereshing方法)
-
-        self.table.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction:#selector(headerRereshing))
-        // 马上进入刷新状态
-//        self.table.mj_header.beginRefreshing()
-
-        self.table.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(footerRereshing))
+        
+        self.table.bindHeadRefreshHandler({
+            
+            self.headerRereshing()
+            
+        }, themeColor: UIColor.white, refreshStyle: .animatableArrow)
+        
+        self.table.bindFootRefreshHandler({
+            
+            self.footerRereshing()
+            
+        }, themeColor: UIColor.white, refreshStyle: .animatableArrow)
+        
+        self.table.footRefreshControl.setAlertTextColor(UIColor.black)
+        self.table.footRefreshControl.autoRefreshOnFoot = true
     }
     
-    @objc func headerRereshing(){
+    func headerRereshing(){
         
         let parameters = ["adType":1]
         
@@ -102,17 +111,22 @@ class DailyRecommendation: UIViewController ,UITableViewDataSource,UITableViewDe
             
             self.tableDatas = HomeTableInfo.mj_objectArray(withKeyValuesArray: obj)
             
-            self.table.mj_header.endRefreshing()
+            self.table.headRefreshControl.endRefreshing()
             
             self.table.reloadData()
             
         }) { (task:URLSessionDataTask?, error:NSError?) in
             
-            self.table.mj_header.endRefreshing()
+            self.table.headRefreshControl.endRefreshing()
         }
     }
     
-    @objc func footerRereshing(){
+    func footerRereshing(){
+        
+        if(self.tableDatas == nil){
+            self.headerRereshing()
+            return
+        }
         
         self.lastId = (self.tableDatas.lastObject as! HomeTableInfo).id.intValue
 
@@ -124,13 +138,14 @@ class DailyRecommendation: UIViewController ,UITableViewDataSource,UITableViewDe
             
             self.tableDatas.addObjects(from: tempDatas as! [Any])
             
-            self.table.mj_footer.endRefreshing()
+            self.table.footRefreshControl.endRefreshing(withAlertText: "加载完成", completion: {
+                self.table.reloadData()
+            })
             
-            self.table.reloadData()
             
         }) { (task:URLSessionDataTask?, error:NSError?) in
             
-            self.table.mj_footer.endRefreshing()
+            self.table.footRefreshControl.endRefreshing()
         }
     }
     
@@ -202,17 +217,32 @@ class DailyRecommendation: UIViewController ,UITableViewDataSource,UITableViewDe
         return 126
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tableInfo = self.tableDatas.object(at: indexPath.row) as! HomeTableInfo
+        
+        if(tableInfo.id != 0){
+            let sb = UIStoryboard(name:"Home", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "AudioDetails") as! AudioDetails
+            vc.initDatas(id: tableInfo.id, title: tableInfo.title, mp3Url: tableInfo.mp3url, mp3lrcUrl: tableInfo.mp3lrc)
+            AppService.shared().navigate.pushViewController(vc, animated: true)
+        }else{
+            let vc = ADWeb()
+            vc.url_string = tableInfo.mp3url! as String
+            self.navigationController!.pushViewController(vc, animated: true)
+        }
+    }
+    
     //处理section header悬停
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == self.table! {
             let sectionHeaderHeight = CGFloat(45.0)//headerView的高度
             if (scrollView.contentOffset.y <= sectionHeaderHeight && scrollView.contentOffset.y >= 0) {
-                
+
                 scrollView.contentInset = UIEdgeInsets(top: -scrollView.contentOffset.y, left: 0, bottom: 0, right: 0);
-                
+
             } else if (scrollView.contentOffset.y >= sectionHeaderHeight) {
-                
-                scrollView.contentInset = UIEdgeInsets(top: -sectionHeaderHeight, left: 0, bottom: 0, right: 0);
+
+//                scrollView.contentInset = UIEdgeInsets(top: -sectionHeaderHeight, left: 0, bottom: 0, right: 0);
             }
         }
     }

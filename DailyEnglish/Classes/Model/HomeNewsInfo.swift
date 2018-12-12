@@ -28,4 +28,7 @@ class HomeNewsContentInfo: NSObject {
     @objc var onclick:NSString!
     @objc var par:NSString!
     @objc var pic:NSString!
+    
+    
+    @objc var subscriptionTime:NSString!
 }
