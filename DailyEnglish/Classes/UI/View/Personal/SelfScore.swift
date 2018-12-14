@@ -20,7 +20,13 @@ class SelfScore: UIView {
     func initDatas(dict:NSDictionary,year:Int,month:Int,day:Int,sc:String){
         self.daysCount.text = (dict.object(forKey: "num") as! NSNumber).stringValue
         
-        self.scoreCount.text = (dict.object(forKey: "score") as! String)
+        self.scoreCount.text = "0"
+        
+        let temp = dict.object(forKey: "score")
+        if !(temp is NSNull){
+            self.scoreCount.text = (temp as! String)
+        }
+        
         
         if(day >= 10){
             
@@ -43,7 +49,14 @@ class SelfScore: UIView {
     }
     
     @IBAction func onShare(_ sender: Any) {
-        
+        let sb = UIStoryboard(name:"Home", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Share")
+        let share = vc.view as! Share
+        share.shareType = .AudioDetails
+        share.shareTitle = "我今天的成绩单"
+        share._des = "我在每日英语app连续签到了\(String(describing: self.daysCount.text!))天，获得总分\(String(describing: self.scoreCount.text!))"
+        share.initDatas()
+        self.addSubview(share)
     }
     
     @IBAction func onCancel(_ sender: Any) {

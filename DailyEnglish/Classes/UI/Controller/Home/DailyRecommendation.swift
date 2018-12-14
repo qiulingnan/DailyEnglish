@@ -248,6 +248,10 @@ class DailyRecommendation: UIViewController ,UITableViewDataSource,UITableViewDe
     }
     
     @IBAction func onSearch(_ sender: Any) {
-        
+        let sb = UIStoryboard(name:"Home", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Search")
+        let temp = vc.view as! Search
+        temp.initData()
+        self.view.addSubview(temp)
     }
 }

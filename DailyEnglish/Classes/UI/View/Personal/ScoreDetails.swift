@@ -15,7 +15,15 @@ class ScoreDetails: UIView {
     var data:Evaluation!
     
     @IBAction func onShare(_ sender: Any) {
-        
+        let sb = UIStoryboard(name:"Home", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Share")
+        let share = vc.view as! Share
+        share.shareType = .AudioDetails
+        share.shareTitle = "我得了\(Int(data.total_score.doubleValue * 20))分！！"
+        share._des = "我读了\(Int(data.total_score.doubleValue * 20))分，超厉害的呢！快来试试吧~~"
+        share.initDatas()
+        self.addSubview(share)
+    
     }
     
     @IBAction func onCancel(_ sender: Any) {

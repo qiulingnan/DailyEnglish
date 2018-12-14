@@ -62,7 +62,6 @@ class AudioDetails: UIViewController ,UITableViewDelegate,UITableViewDataSource 
     //更新进度条定时器
     var timer:Timer!
     //音频播放器
-//    var audioPlayer: STKAudioPlayer!
     var audio:AVAudioPlayer!
     
     var lrcDatas:NSMutableArray!
@@ -461,10 +460,14 @@ class AudioDetails: UIViewController ,UITableViewDelegate,UITableViewDataSource 
     }
     
     @IBAction func onFollowUp(_ sender: Any) {
+        
+        if(isPlay){
+            self.onPlay(self.playBtn)
+        }
+        
         let sb = UIStoryboard(name:"Home", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "FollowUp") as! FollowUp
-        vc.id = self.id
-        vc.titleStr = self.navigateTitle
+        vc.initDatas(titleStr: self.navigateTitle, lrcDatas: self.lrcDatas, mp3Path: self.mp3Path)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -553,6 +556,9 @@ class AudioDetails: UIViewController ,UITableViewDelegate,UITableViewDataSource 
         let sb = UIStoryboard(name:"Home", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "Share")
         let share = vc.view as! Share
+        share.shareType = .AudioDetails
+        share.shareTitle = self.navigateTitle
+        share._des = "每日英语,精彩你的生活!"
         share.initDatas()
         self.view.addSubview(share)
         

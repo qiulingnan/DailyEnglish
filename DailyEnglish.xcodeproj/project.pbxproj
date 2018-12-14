@@ -166,7 +166,16 @@
 		169B786C21B912FC00E3505C /* JXCategoryTitleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 169B784D21B912FC00E3505C /* JXCategoryTitleImageView.m */; };
 		169B786E21B9370300E3505C /* RewardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169B786D21B9370300E3505C /* RewardInfo.swift */; };
 		169B787021B9555200E3505C /* RewardPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169B786F21B9555200E3505C /* RewardPay.swift */; };
+		169D419C21C29CF500453706 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169D419B21C29CF500453706 /* Search.swift */; };
+		169D419E21C2B5A500453706 /* SearchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169D419D21C2B5A500453706 /* SearchDetails.swift */; };
 		16A0019121932D4D00AA8A23 /* HomeTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A0019021932D4D00AA8A23 /* HomeTableInfo.swift */; };
+		16A099D721C3CC480037C6AE /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A099D621C3CC480037C6AE /* TencentOpenAPI.framework */; };
+		16A099DF21C3E8A70037C6AE /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A099DB21C3E8A60037C6AE /* libWeiboSDK.a */; };
+		16A099E021C3E8A70037C6AE /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 16A099DD21C3E8A60037C6AE /* WeiboSDK.bundle */; };
+		16A099E221C3E9010037C6AE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A099E121C3E9000037C6AE /* ImageIO.framework */; };
+		16A099E421C3E9330037C6AE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A099E321C3E9330037C6AE /* Security.framework */; };
+		16A099E621C3E93F0037C6AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A099E521C3E93F0037C6AE /* CoreText.framework */; };
+		16A099E821C3E9750037C6AE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A099E721C3E9750037C6AE /* libsqlite3.tbd */; };
 		16A6B6AC21A63BF800B4EFDC /* Essence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6B6AB21A63BF800B4EFDC /* Essence.swift */; };
 		16ABAB2A21BE20A3008BD8E8 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 16ABAB2921BE20A3008BD8E8 /* XMLReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		16ABAB2C21BE262C008BD8E8 /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ABAB2B21BE262C008BD8E8 /* Evaluation.swift */; };
@@ -177,6 +186,12 @@
 		16B6717821C15654002CDB31 /* SYNoticeBrowseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B6717521C15653002CDB31 /* SYNoticeBrowseLabel.m */; };
 		16B6717921C15654002CDB31 /* UIScrollView+SYTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B6717721C15653002CDB31 /* UIScrollView+SYTouch.m */; };
 		16B6717B21C16EB0002CDB31 /* FollowUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6717A21C16EB0002CDB31 /* FollowUp.swift */; };
+		16B6F85E21C41F9700DFD31A /* PayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6F85D21C41F9600DFD31A /* PayInfo.swift */; };
+		16B6F86021C420E300DFD31A /* AlipayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6F85F21C420E300DFD31A /* AlipayService.swift */; };
+		16B6F86321C428C400DFD31A /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 16B6F86121C428C300DFD31A /* AlipaySDK.bundle */; };
+		16B6F86421C428C400DFD31A /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B6F86221C428C400DFD31A /* AlipaySDK.framework */; };
+		16B6F86621C4292600DFD31A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B6F86521C4292600DFD31A /* CFNetwork.framework */; };
+		16B6F86821C4293200DFD31A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B6F86721C4293200DFD31A /* CoreMotion.framework */; };
 		16B7000521B67A34003EC723 /* DownloadListInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B7000421B67A34003EC723 /* DownloadListInfo.swift */; };
 		16B7002821B6ADFD003EC723 /* XMFDropBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B7002721B6ADFC003EC723 /* XMFDropBoxView.m */; };
 		16BF012C21B79CB300171B76 /* BatchDownloadProsses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF012B21B79CB300171B76 /* BatchDownloadProsses.swift */; };
@@ -484,7 +499,18 @@
 		169B784D21B912FC00E3505C /* JXCategoryTitleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCategoryTitleImageView.m; sourceTree = "<group>"; };
 		169B786D21B9370300E3505C /* RewardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardInfo.swift; sourceTree = "<group>"; };
 		169B786F21B9555200E3505C /* RewardPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPay.swift; sourceTree = "<group>"; };
+		169D419B21C29CF500453706 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		169D419D21C2B5A500453706 /* SearchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetails.swift; sourceTree = "<group>"; };
 		16A0019021932D4D00AA8A23 /* HomeTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableInfo.swift; sourceTree = "<group>"; };
+		16A099D621C3CC480037C6AE /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = DailyEnglish/TencentOpenAPI.framework; sourceTree = "<group>"; };
+		16A099DB21C3E8A60037C6AE /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		16A099DC21C3E8A60037C6AE /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
+		16A099DD21C3E8A60037C6AE /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		16A099DE21C3E8A60037C6AE /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		16A099E121C3E9000037C6AE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		16A099E321C3E9330037C6AE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		16A099E521C3E93F0037C6AE /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		16A099E721C3E9750037C6AE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		16A6B6AB21A63BF800B4EFDC /* Essence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Essence.swift; sourceTree = "<group>"; };
 		16ABAB2821BE20A3008BD8E8 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		16ABAB2921BE20A3008BD8E8 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
@@ -500,6 +526,12 @@
 		16B6717621C15653002CDB31 /* UIScrollView+SYTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SYTouch.h"; sourceTree = "<group>"; };
 		16B6717721C15653002CDB31 /* UIScrollView+SYTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SYTouch.m"; sourceTree = "<group>"; };
 		16B6717A21C16EB0002CDB31 /* FollowUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUp.swift; sourceTree = "<group>"; };
+		16B6F85D21C41F9600DFD31A /* PayInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayInfo.swift; sourceTree = "<group>"; };
+		16B6F85F21C420E300DFD31A /* AlipayService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlipayService.swift; sourceTree = "<group>"; };
+		16B6F86121C428C300DFD31A /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AlipaySDK.bundle; path = DailyEnglish/AlipaySDK.bundle; sourceTree = "<group>"; };
+		16B6F86221C428C400DFD31A /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = DailyEnglish/AlipaySDK.framework; sourceTree = "<group>"; };
+		16B6F86521C4292600DFD31A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		16B6F86721C4293200DFD31A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		16B7000421B67A34003EC723 /* DownloadListInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadListInfo.swift; sourceTree = "<group>"; };
 		16B7002621B6ADFC003EC723 /* XMFDropBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFDropBoxView.h; sourceTree = "<group>"; };
 		16B7002721B6ADFC003EC723 /* XMFDropBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFDropBoxView.m; sourceTree = "<group>"; };
@@ -578,15 +610,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B6F86821C4293200DFD31A /* CoreMotion.framework in Frameworks */,
+				16B6F86621C4292600DFD31A /* CFNetwork.framework in Frameworks */,
+				16A099E821C3E9750037C6AE /* libsqlite3.tbd in Frameworks */,
+				16B6F86421C428C400DFD31A /* AlipaySDK.framework in Frameworks */,
+				16A099E621C3E93F0037C6AE /* CoreText.framework in Frameworks */,
+				16A099E421C3E9330037C6AE /* Security.framework in Frameworks */,
+				16A099E221C3E9010037C6AE /* ImageIO.framework in Frameworks */,
 				167F0F9321BCF1B4001BA6A3 /* libc++.tbd in Frameworks */,
 				167F0F9121BCF1AB001BA6A3 /* CoreGraphics.framework in Frameworks */,
 				167F0F8F21BCF1A3001BA6A3 /* QuartzCore.framework in Frameworks */,
 				167F0F8D21BCF199001BA6A3 /* CoreLocation.framework in Frameworks */,
 				167F0F8B21BCF18F001BA6A3 /* UIKit.framework in Frameworks */,
+				16A099D721C3CC480037C6AE /* TencentOpenAPI.framework in Frameworks */,
 				167F0F8921BCF188001BA6A3 /* AudioToolbox.framework in Frameworks */,
 				167F0F8721BCF17A001BA6A3 /* CoreTelephony.framework in Frameworks */,
 				167F0F8521BCF166001BA6A3 /* Foundation.framework in Frameworks */,
 				167F0F8321BCF15F001BA6A3 /* SystemConfiguration.framework in Frameworks */,
+				16A099DF21C3E8A70037C6AE /* libWeiboSDK.a in Frameworks */,
 				167F0F8121BCF137001BA6A3 /* AVFoundation.framework in Frameworks */,
 				167F0F7F21BCF121001BA6A3 /* libz.tbd in Frameworks */,
 				167F0F7D21BCED68001BA6A3 /* iflyMSC.framework in Frameworks */,
@@ -698,6 +739,7 @@
 				1656BAD821B3FBE10050C5FF /* SpeedSpeech.swift */,
 				16BF012B21B79CB300171B76 /* BatchDownloadProsses.swift */,
 				16B6717121C15034002CDB31 /* PlayAudio.swift */,
+				169D419B21C29CF500453706 /* Search.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -723,6 +765,7 @@
 				1650CC9921A6C795004349B2 /* BookDetails.swift */,
 				166CCBB621B4D3D000AD6695 /* BatchDownload.swift */,
 				16B6717A21C16EB0002CDB31 /* FollowUp.swift */,
+				169D419D21C2B5A500453706 /* SearchDetails.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1129,6 +1172,17 @@
 			path = TitleImage;
 			sourceTree = "<group>";
 		};
+		16A099DA21C3E8A60037C6AE /* libWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				16A099DB21C3E8A60037C6AE /* libWeiboSDK.a */,
+				16A099DC21C3E8A60037C6AE /* WBHttpRequest.h */,
+				16A099DD21C3E8A60037C6AE /* WeiboSDK.bundle */,
+				16A099DE21C3E8A60037C6AE /* WeiboSDK.h */,
+			);
+			path = libWeiboSDK;
+			sourceTree = "<group>";
+		};
 		16ABAB2721BE20A3008BD8E8 /* XMLReader */ = {
 			isa = PBXGroup;
 			children = (
@@ -1310,6 +1364,7 @@
 		16FA9A852186FFDD0094F334 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				16B6F85D21C41F9600DFD31A /* PayInfo.swift */,
 				16CB1A302188728D0030D732 /* ADInfo.swift */,
 				16CB1A942188900F0030D732 /* NetStatus.swift */,
 				16D6A28F2191F95F00EACD02 /* ScrolInfo.swift */,
@@ -1336,6 +1391,7 @@
 		16FA9A862186FFF10094F334 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				16B6F85F21C420E300DFD31A /* AlipayService.swift */,
 				163A10CE21884331000AE1D1 /* AppService.swift */,
 				163A10CC2188423D000AE1D1 /* HttpService.swift */,
 				1670F31A2196079700FBA64E /* AudioSet.h */,
@@ -1376,6 +1432,7 @@
 		16FA9A93218700960094F334 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				16A099DA21C3E8A60037C6AE /* libWeiboSDK */,
 				16ABAB2721BE20A3008BD8E8 /* XMLReader */,
 				167F0F9421BD5452001BA6A3 /* YSCAnimation */,
 				1675034321B23A9800947540 /* MCDownloader */,
@@ -1447,6 +1504,15 @@
 		6712F52656B4E4AEAED99E28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16B6F86721C4293200DFD31A /* CoreMotion.framework */,
+				16B6F86521C4292600DFD31A /* CFNetwork.framework */,
+				16B6F86121C428C300DFD31A /* AlipaySDK.bundle */,
+				16B6F86221C428C400DFD31A /* AlipaySDK.framework */,
+				16A099E721C3E9750037C6AE /* libsqlite3.tbd */,
+				16A099E521C3E93F0037C6AE /* CoreText.framework */,
+				16A099E321C3E9330037C6AE /* Security.framework */,
+				16A099E121C3E9000037C6AE /* ImageIO.framework */,
+				16A099D621C3CC480037C6AE /* TencentOpenAPI.framework */,
 				167F0F9221BCF1B4001BA6A3 /* libc++.tbd */,
 				167F0F9021BCF1AB001BA6A3 /* CoreGraphics.framework */,
 				167F0F8E21BCF1A3001BA6A3 /* QuartzCore.framework */,
@@ -1598,10 +1664,12 @@
 				16242BD421BA9B8C00A84027 /* LXCalendarHearder.xib in Resources */,
 				16FA9AB4218725780094F334 /* LaunchScreen.storyboard in Resources */,
 				167DD2C72194B81F00FBFB05 /* Home.storyboard in Resources */,
+				16A099E021C3E8A70037C6AE /* WeiboSDK.bundle in Resources */,
 				167F0FF021BD5452001BA6A3 /* SeaVertex.glsl in Resources */,
 				167F0FF921BD5452001BA6A3 /* fill.png in Resources */,
 				167F0FFB21BD5452001BA6A3 /* maskImage.png in Resources */,
 				16FA9A542186E2190094F334 /* Assets.xcassets in Resources */,
+				16B6F86321C428C400DFD31A /* AlipaySDK.bundle in Resources */,
 				165D9327218C2F0100EFFA53 /* Main.storyboard in Resources */,
 				167F0FE221BD5452001BA6A3 /* fanshaped.jpg in Resources */,
 				167F0FEF21BD5452001BA6A3 /* SeaFragment.glsl in Resources */,
@@ -1748,6 +1816,7 @@
 				169B784E21B912FC00E3505C /* JXCategoryBaseCell.m in Sources */,
 				165EE7CC21A2D76400A593D4 /* AudioMore.swift in Sources */,
 				169B785821B912FC00E3505C /* JXCategoryImageCell.m in Sources */,
+				16B6F85E21C41F9700DFD31A /* PayInfo.swift in Sources */,
 				1675034C21B23A9800947540 /* MCDownloadReceipt.m in Sources */,
 				16FA9AA3218700BD0094F334 /* UIViewController+BackButtonHandler.m in Sources */,
 				169B786721B912FC00E3505C /* JXCategoryTitleCell.m in Sources */,
@@ -1776,6 +1845,7 @@
 				16B5C879219D19D0004065AD /* CJLabel.m in Sources */,
 				16E8294C21B5288F00FED55F /* QLNCustonImageView.swift in Sources */,
 				16417318218F821700EC37ED /* LYLPhotoTailoringViewController.m in Sources */,
+				16B6F86021C420E300DFD31A /* AlipayService.swift in Sources */,
 				167DD2C521946D8F00FBFB05 /* ADWeb.swift in Sources */,
 				16B6717921C15654002CDB31 /* UIScrollView+SYTouch.m in Sources */,
 				16BF012C21B79CB300171B76 /* BatchDownloadProsses.swift in Sources */,
@@ -1801,6 +1871,7 @@
 				16FA9AA4218700BD0094F334 /* UITabBar+TabbarItemBadge.m in Sources */,
 				167F0FDF21BD5452001BA6A3 /* YSCCarouselTitleView.m in Sources */,
 				16D6A28E2191F0E000EACD02 /* HomeHeaderView.swift in Sources */,
+				169D419C21C29CF500453706 /* Search.swift in Sources */,
 				167F0FF321BD5452001BA6A3 /* YSCTableRefreshCurveView.m in Sources */,
 				1668CDEA2190771200AB4487 /* EditNikeName.swift in Sources */,
 				16B7002821B6ADFD003EC723 /* XMFDropBoxView.m in Sources */,
@@ -1833,6 +1904,7 @@
 				168C3AE521C01AF5006ABCEC /* About.swift in Sources */,
 				1646759921A4EFC400FD3B11 /* BookNet.swift in Sources */,
 				169B786021B912FC00E3505C /* JXCategoryIndicatorTriangleView.m in Sources */,
+				169D419E21C2B5A500453706 /* SearchDetails.swift in Sources */,
 				16BF012E21B813EE00171B76 /* RewardRanking.swift in Sources */,
 				16242BDB21BA9B8C00A84027 /* NSString+NCDate.m in Sources */,
 				16FA9ABA21872DD80094F334 /* StartViewController.swift in Sources */,
@@ -2033,7 +2105,45 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gns.DailyEnglish;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DailyEnglish/Classes/Lib/libWeiboSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"WeChatSDK\"",
+					"-l\"c++\"",
+					"-l\"sqlite3.0\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"EasyShowView\"",
+					"-framework",
+					"\"KafkaRefresh\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"SDAutoLayout\"",
+					"-framework",
+					"\"SDCycleScrollView\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StreamingKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"Toast\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.en8848.daily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DailyEnglish/DailyEnglish-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2061,7 +2171,45 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gns.DailyEnglish;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DailyEnglish/Classes/Lib/libWeiboSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"WeChatSDK\"",
+					"-l\"c++\"",
+					"-l\"sqlite3.0\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"EasyShowView\"",
+					"-framework",
+					"\"KafkaRefresh\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"SDAutoLayout\"",
+					"-framework",
+					"\"SDCycleScrollView\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StreamingKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"Toast\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.en8848.daily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DailyEnglish/DailyEnglish-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

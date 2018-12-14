@@ -20,7 +20,9 @@ class RewardPay: UIView {
     
     var keyboardIsShow = false
     
-    var payState = 0
+    var payState = "wxpay"
+    
+    var loadingView:EasyLoadingView!
     
     func initDatas(){
         
@@ -102,23 +104,91 @@ class RewardPay: UIView {
     }
     
     @IBAction func onWechat(_ sender: Any) {
-        self.payState = 0
+        self.payState = "wxpay"
         self.wechatCheck.image = UIImage(named: "checkbox_checked")
         self.alipayCheck.image = UIImage(named: "checkbox_normal")
     }
     
     @IBAction func onAlipay(_ sender: Any) {
-        self.payState = 1
+        self.payState = "alipay"
         self.wechatCheck.image = UIImage(named: "checkbox_normal")
         self.alipayCheck.image = UIImage(named: "checkbox_checked")
     }
     
     @IBAction func onSure(_ sender: Any) {
         
+        loadingView = EasyLoadingView.showLoadingText("") { () -> EasyLoadingConfig? in
+            
+            let config = EasyLoadingConfig.shared()
+            config.showOnWindow = true
+            config.tintColor = netColor
+            config.superReceiveEvent = false
+            return config
+        }
+        
+        var parameters = ["money":self.totalTextField.text!,"appid":"mryy","pay":payState] as [String : Any]
+        
+        if(self.nickField.text != ""){
+            parameters = ["money":self.totalTextField.text!,"appid":"mryy","pay":payState,"reward_name":self.nickField.text!] as [String : Any]
+        }
+        
+        HttpService.shared().post(urlLast: "trade/reward", parameters: parameters as AnyObject, succeed: { (task:URLSessionDataTask?, obj:AnyObject?) in
+            
+            if(self.payState == "wxpay"){
+                let payInfo = PayInfo.mj_object(withKeyValues: obj)
+                self.wxPay(pay: payInfo!)
+            }else{
+                let payInfo = PayInfo()
+                payInfo.alipay = (obj as! NSString)
+                self.alipay(pay: payInfo)
+            }
+            
+            EasyLoadingView.hidenLoading(self.loadingView)
+        }) { (task:URLSessionDataTask?, error:NSError?) in
+            EasyLoadingView.hidenLoading(self.loadingView)
+            
+        }
+    }
+    
+    func payCallBack(dict:NSDictionary){
+        if(self.payState == "wxpay"){
+            self.removeFromSuperview()
+        }else{
+            if((dict).value(forKey: "resultStatus") as! String == "9000") {
+                self.removeFromSuperview()
+            }else {
+                AppService.shared().showTip(tip: "支付失败")
+            }
+        }
+    }
+    
+    func wxPay(pay:PayInfo){
+        
+        AlipayService.sharedService().callBack = {(dict:NSDictionary) in
+            self.payCallBack(dict: dict)
+        }
+        
+        let request = PayReq()
+        
+        request.partnerId = pay.partnerid as String
+        request.prepayId = pay.prepay_id as String
+        request.package = pay.package as String
+        request.nonceStr = pay.nonce_str as String
+        request.timeStamp = UInt32(pay.timestamp.intValue)
+        request.sign = pay.sign as String
+        WXApi.send(request)
+    }
+    
+    func alipay(pay:PayInfo){
+        //应用注册scheme,在AlixPayDemo-Info.plist定义URL types
+        let appScheme = "en8848.daily"
+        
+        AlipaySDK.defaultService()?.payOrder(pay.alipay as String, fromScheme: appScheme, callback: { (dict:[AnyHashable : Any]?) in
+            self.payCallBack(dict: dict! as NSDictionary)
+        })
     }
     
 }
-
 
 extension RewardPay :UITextFieldDelegate {
     

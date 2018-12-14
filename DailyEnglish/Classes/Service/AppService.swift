@@ -42,6 +42,7 @@ class AppService: NSObject{
     var downloadDatas:NSMutableArray! //下载数据
     var subscriptionDatas:NSMutableArray!//订阅
     var signDatas:NSMutableArray!//签到
+    var searchDatas:NSMutableArray!//搜索
    
     var audio:AVAudioPlayer!
     
@@ -99,6 +100,54 @@ class AppService: NSObject{
         playAudio = PlayAudio(frame: CGRect(x: 0, y: screenSize.height - self.mainTabbar.tabBar.frame.size.height - 30, width: screenSize.width, height: 30))
         
         self.mainTabbar.view.addSubview(playAudio)
+    }
+    
+    //搜索
+    
+    func loadSearchDatas(){
+        if(UserDefaults.standard.array(forKey: search_Datas) != nil){
+            self.searchDatas = NSMutableArray(array: (UserDefaults.standard.array(forKey: search_Datas)!))
+            
+        }else{
+            self.searchDatas = NSMutableArray()
+        }
+        
+    }
+    
+    func removeSearch(index:Int){
+        self.searchDatas.removeObject(at: index)
+        self.saveSearchDatas()
+    }
+    
+    func removeAllSearch(){
+        
+        self.searchDatas.removeAllObjects()
+        self.saveSearchDatas()
+    }
+    
+    func saveSearchDatas(){
+        UserDefaults.standard.set(self.searchDatas, forKey: search_Datas)
+    }
+    
+    func findSearch(data:String) ->Bool{
+        
+        for item in self.searchDatas {
+            if((item as! String) == data){
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    func addSearchData(data:String){
+        
+        if(!findSearch(data: data)){
+            self.searchDatas!.add(data)
+            
+            self.saveSearchDatas()
+        }
+        
     }
     
     //签到
@@ -435,6 +484,7 @@ class AppService: NSObject{
         self.loadDownloadDatas()
         self.loadSubscriptionDatas()
         self.loadSignInDatas()
+        self.loadSearchDatas()
     }
     
     func loadSettingData(){

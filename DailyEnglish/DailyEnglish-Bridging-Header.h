@@ -11,6 +11,9 @@
 #import "SDCycleScrollView/SDCycleScrollView.h"
 #import "StreamingKit/STKAudioPlayer.h"
 #import "iFlyMSC/IFlyMSC.h"
+#import "TencentOpenAPI/TencentOAuth.h"
+#import "TencentOpenAPI/QQApiInterface.h"
+#import "AlipaySDK/AlipaySDK.h"
 
 #import "ATCountdownButton.h"
 #import "AFNetworking.h"
@@ -28,3 +31,5 @@
 #import "XMLReader.h"
 #import "UITextView+ZWPlaceHolder.h"
 #import "SYNoticeBrowseLabel.h"
+#import "WXApi.h"
+#import "WeiboSDK.h"

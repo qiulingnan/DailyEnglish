@@ -26,8 +26,11 @@ let sentence_datas = "sentence_datas"//例句数据
 let word_datas = "word_datas"//单词数据
 let download_datas = "download_datas"//下载数据
 let subscription_datas = "subscription_datas"//下载数据
-let signIn_Datas = "signIn_datas"//下载数据
+let signIn_Datas = "signIn_datas"//签到数据
+let search_Datas = "search_Datas"//搜索数据
 
+let weiboAppKey = "1158443048"
+let weiboURL = "https://api.weibo.com/oauth2/default.html"
 
 let icon_image = "icon_image"
 

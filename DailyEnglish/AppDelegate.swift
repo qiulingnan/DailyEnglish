@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
 
@@ -37,6 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let initString = "appid=5c0cb175"
         IFlySpeechUtility.createUtility(initString)
         
+        WXApi.registerApp("wx2fc8b1646b763805")
+        _ = TencentOAuth.init(appId: "101050713", andDelegate: nil)
+        
+        WeiboSDK.registerApp(weiboAppKey)
+        
         return true
     }
 
@@ -61,7 +66,89 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        
+        if (url.scheme == "wx2fc8b1646b763805") {
+            return WXApi.handleOpen(url, delegate: self)
+        }
+        
+        if (url.scheme == "tencent101050713") {
+            
+            QQApiInterface.handleOpen(url, delegate: nil)
+            
+            if(TencentOAuth.canHandleOpen(url)){
+                return TencentOAuth.handleOpen(url)
+            }
+            
+        }
+        
+        if (url.scheme == "wb1158443048") {
+            return WeiboSDK.handleOpen(url, delegate: self)
+        }
+        
+        return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        if(url.host == "safepay"){
+            AlipaySDK.defaultService()?.processOrder(withPaymentResult: url, standbyCallback: { (dict : [AnyHashable : Any]?) in
+                AlipayService.sharedService().call(dict: dict! as NSDictionary)
+            })
+        }
+        
+        if(url.host == "platformapi"){
+            
+            AlipaySDK.defaultService()?.processAuthResult(url, standbyCallback: { (dict : [AnyHashable : Any]?) in
+                AlipayService.sharedService().call(dict: dict! as NSDictionary)
+            })
+        }
+        
+        if (url.scheme == "wb1158443048") {
+            return WeiboSDK.handleOpen(url, delegate: self)
+        }
+        return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        if (url.scheme == "wx2fc8b1646b763805") {
+            return WXApi.handleOpen(url, delegate: self)
+        }
+        
+        if (url.scheme == "wb1158443048") {
+            return WeiboSDK.handleOpen(url, delegate: self)
+        }
+        
+        return true
+    }
 
 
+}
+
+extension AppDelegate: WeiboSDKDelegate {
+    func didReceiveWeiboRequest(_ request: WBBaseRequest!) {
+       
+    }
+    
+    func didReceiveWeiboResponse(_ response: WBBaseResponse!) {
+        
+    }
+    
+}
+
+extension AppDelegate: WXApiDelegate {
+    
+    func onResp(_ resp: BaseResp!) {
+        
+        if(resp is PayResp){
+            let response = resp as! PayResp
+            if(response.errCode == 0){
+                AlipayService.sharedService().call(dict: [:])
+            }
+        }
+    }
+    
 }
 
